@@ -1,0 +1,25 @@
+name: Lighthouse Monitor
+
+# Workflow A — scheduled production performance guard. Audits the LIVE deployed
+# URLs (from output/*/deploy.json) and fails if any score drops below 90.
+on:
+  schedule:
+    - cron: '0 13 * * 1' # Mondays 13:00 UTC
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Ensure Chrome for Puppeteer
+        run: npx puppeteer browsers install chrome
+      - name: Lighthouse monitor (live URLs, fail < 90)
+        run: node tools/monitor.js

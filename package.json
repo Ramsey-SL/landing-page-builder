@@ -1,13 +1,18 @@
 {
-  "name": "shopify-page-cloner",
+  "name": "landing-page-builder",
   "version": "1.0.0",
   "description": "Strategy Labs — Shopify landing page → Netlify performance rebuild",
   "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "scrape": "node tools/scrape.js",
     "build": "node tools/build.js",
     "audit": "node tools/audit.js",
     "deploy": "node tools/deploy.js",
+    "serve": "node tools/serve.js",
+    "smoke": "node tools/smoke-test.mjs",
+    "monitor": "node tools/monitor.js",
     "run-all": "npm run scrape && npm run build && npm run audit && npm run deploy"
   },
   "dependencies": {

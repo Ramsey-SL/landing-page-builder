@@ -124,6 +124,25 @@ CLI version, so `deploy.js` parses the CLI's text output for the live URL.
   Business / Google Ads for clean conversion attribution.
 - Phase 2 (not started): CRO variants, A/B testing, weekly Lighthouse monitoring.
 
+## Continuous checks (GitHub Actions)
+
+- **`smoke.yml`** — runs on every push/PR. Fast, no browser: `node --check` on all
+  scripts + `tools/smoke-test.mjs` (render-helper assertions + config JSON
+  validation). Catches broken code immediately.
+- **`lighthouse.yml`** — scheduled weekly (and manually via *Run workflow*). Runs
+  `tools/monitor.js`, which Lighthouse-audits the live URLs found in committed
+  `output/*/deploy.json` and fails if any score drops below 90. This is the
+  ongoing production-performance guard.
+
+Run them locally too: `npm run smoke` and `npm run monitor`.
+
+## License
+
+Proprietary — © Strategy Labs, all rights reserved (`UNLICENSED`). Not open
+source. See `LICENSE`. Client brand assets under `config/brand-assets/` and
+`output/` belong to their respective owners and are used only for the applicable
+client engagement — they are not covered by the software license.
+
 ## Adding a new client/collection
 
 1. `node tools/scrape.js <collection-url> <slug>`
