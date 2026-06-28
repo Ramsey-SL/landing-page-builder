@@ -45,6 +45,25 @@ export async function renderRecipe(recipe, brand, { trackingEnabled = true, temp
   const heroSrc = heroSection?.hero?.localImage || './assets/hero.webp';
   const c = brand.colors;
 
+  // Custom display font is optional. With a font file we self-host + preload it;
+  // without one (e.g. auto-derived brands) we fall back to a system stack.
+  const hasFont = !!brand.displayFontFile;
+  const fontPreload = hasFont
+    ? `<link rel="preload" as="font" type="font/woff2" href="./assets/${brand.displayFontFile}" crossorigin>`
+    : '';
+  const fontFace = hasFont
+    ? `@font-face {
+      font-family: "${brand.displayFont}";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("./assets/${brand.displayFontFile}") format("woff2");
+    }`
+    : '';
+  const displayStack = hasFont
+    ? `"${brand.displayFont}", "Arial Narrow", Helvetica, Arial, sans-serif`
+    : `Helvetica, Arial, "Helvetica Neue", sans-serif`;
+
   const vars = {
     PAGE_TITLE: escapeHtml(recipe.meta.pageTitle),
     META_DESCRIPTION: escapeHtml(recipe.meta.metaDescription),
@@ -69,8 +88,9 @@ export async function renderRecipe(recipe, brand, { trackingEnabled = true, temp
     BODY_COLOR: c.body,
     TEXT_COLOR: c.text,
     ACCENT_COLOR: c.accent,
-    DISPLAY_FONT: brand.displayFont,
-    DISPLAY_FONT_FILE: brand.displayFontFile,
+    FONT_PRELOAD: fontPreload,
+    FONT_FACE: fontFace,
+    DISPLAY_STACK: displayStack,
     TRACKING: trackingEnabled ? renderTracking(brand.tracking, { enabled: ['google', 'meta', 'klaviyo'] }) : '',
   };
 

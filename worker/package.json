@@ -1,0 +1,15 @@
+{
+  "name": "landing-page-builder-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Job worker: pulls clone/publish jobs and runs the engine in src/",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "pg-boss": "^10.1.5"
+  },
+  "comment": "Engine deps (puppeteer, sharp, lighthouse) are shared from the repo root node_modules via the ../src imports; install them at the root."
+}

@@ -15,16 +15,10 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
 
   <link rel="preload" as="image" href="{{HERO_IMAGE_SRC}}" fetchpriority="high">
-  <link rel="preload" as="font" type="font/woff2" href="./assets/{{DISPLAY_FONT_FILE}}" crossorigin>
+  {{FONT_PRELOAD}}
 
   <style>
-    @font-face {
-      font-family: "{{DISPLAY_FONT}}";
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url("./assets/{{DISPLAY_FONT_FILE}}") format("woff2");
-    }
+    {{FONT_FACE}}
     *, *::before, *::after { box-sizing: border-box; }
     :root {
       --teal: {{TEAL}};
@@ -35,7 +29,7 @@
       --muted: #5a5a5a;
       --line: #e3e3e3;
       --maxw: 1280px;
-      --display: "{{DISPLAY_FONT}}", "Arial Narrow", Helvetica, Arial, sans-serif;
+      --display: {{DISPLAY_STACK}};
       --sans: Helvetica, Arial, "Helvetica Neue", sans-serif;
     }
     html { -webkit-text-size-adjust: 100%; }

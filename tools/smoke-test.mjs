@@ -20,7 +20,7 @@ import {
   renderFooterColumns,
   applyTemplate,
 } from '../src/render.js';
-import { configToBrand } from '../src/brand.js';
+import { configToBrand, deriveBrandFromContent } from '../src/brand.js';
 import { contentModelToRecipe } from '../src/recipe.js';
 import { renderRecipe } from '../src/page.js';
 
@@ -59,7 +59,7 @@ check('tracking empty when disabled', renderTracking({ metaPixelId: '123' }, { e
 
 // --- template tokens ---
 const template = await readFile(join(ROOT, 'templates', 'landing-page.html'), 'utf8');
-for (const tok of ['{{PAGE_TITLE}}', '{{NAV}}', '{{MAIN}}', '{{FOOTER_COLUMNS}}', '{{TRACKING}}', '{{HERO_IMAGE_SRC}}', '{{TEAL}}', '{{DISPLAY_FONT_FILE}}']) {
+for (const tok of ['{{PAGE_TITLE}}', '{{NAV}}', '{{MAIN}}', '{{FOOTER_COLUMNS}}', '{{TRACKING}}', '{{HERO_IMAGE_SRC}}', '{{TEAL}}', '{{FONT_FACE}}', '{{FONT_PRELOAD}}', '{{DISPLAY_STACK}}']) {
   check(`template contains ${tok}`, template.includes(tok));
 }
 
@@ -94,6 +94,21 @@ check('rendered html inlines the logo', html.includes('<svg id="logo">'));
 check('rendered html includes the brand nav', html.includes('class="mega"') || html.includes('nav__link'));
 check('rendered html has deferred tracking script', html.includes('<script>') && html.includes('addEventListener'));
 check('rendered html sets brand teal', html.includes(brand.colors.teal));
+
+// --- auto-derived brand (arbitrary URL, no curated config, system font) ---
+const autoBrand = deriveBrandFromContent({
+  pageTitle: 'Canvas Bags – Acme Goods',
+  url: 'https://acme.example/collections/bags',
+  collectionName: 'Canvas Bags',
+  navLinks: [{ text: 'Shop', href: 'https://acme.example/collections/all' }, { text: 'About', href: 'https://acme.example/pages/about' }],
+});
+check('auto-brand derives name from title', autoBrand.name === 'Acme Goods');
+check('auto-brand has no custom font', autoBrand.displayFontFile === '');
+const autoRecipe = contentModelToRecipe(fakeContent, autoBrand, fakeAssets);
+const autoHtml = await renderRecipe(autoRecipe, autoBrand, { trackingEnabled: false });
+check('auto-brand html has no @font-face', !autoHtml.includes('@font-face'));
+check('auto-brand html has no leftover tokens', !/\{\{[A-Z0-9_]+\}\}/.test(autoHtml));
+check('auto-brand html still renders products', autoHtml.includes('Alpha Tee'));
 
 // --- config validation ---
 const configDir = join(ROOT, 'config');

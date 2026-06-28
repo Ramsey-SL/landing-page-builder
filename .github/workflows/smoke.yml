@@ -15,7 +15,7 @@ jobs:
           node-version: 20
       - name: Syntax check all scripts
         run: |
-          for f in src/*.js src/**/*.js tools/*.js tools/*.mjs; do
+          for f in src/*.js src/**/*.js tools/*.js tools/*.mjs worker/*.js worker/**/*.js; do
             [ -e "$f" ] || continue
             echo "node --check $f"
             node --check "$f"
