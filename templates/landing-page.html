@@ -203,29 +203,7 @@
   </nav>
 
   <main id="main">
-    <section class="hero" aria-label="{{COLLECTION_NAME}} collection banner">
-      <h1 class="visually-hidden">{{H1_TEXT}}</h1>
-      <img src="{{HERO_IMAGE_SRC}}" alt="{{HERO_IMAGE_ALT}}" width="{{HERO_IMAGE_WIDTH}}" height="{{HERO_IMAGE_HEIGHT}}" fetchpriority="high" decoding="async">
-    </section>
-
-    <section class="collection wrap" aria-labelledby="coll-title">
-      <h2 class="collection__title" id="coll-title">{{COLLECTION_NAME}}</h2>
-      <p class="collection__sub">{{SUBHEADLINE_TEXT}}</p>
-      <ul class="grid">
-          {{PRODUCT_GRID}}
-      </ul>
-    </section>
-
-    <section class="promo" aria-labelledby="promo-title">
-      <h2 id="promo-title">{{NEWSLETTER_BANNER_HEADING}}</h2>
-      <p>{{NEWSLETTER_BLURB}}</p>
-      <form class="signup" data-klaviyo-signup aria-label="Email signup">
-        <label class="visually-hidden" for="promo-email">Email address</label>
-        <input id="promo-email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
-        <button class="btn" type="submit">Sign Up</button>
-        <p class="signup__ok" data-signup-success hidden>Thanks — check your inbox for your discount!</p>
-      </form>
-    </section>
+    {{MAIN}}
   </main>
 
   <footer class="footer">

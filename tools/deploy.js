@@ -19,6 +19,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { deployDir } from '../src/publish/netlify.js';
 
 const execFileP = promisify(execFile);
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -147,12 +148,7 @@ async function main() {
 
   const publishDir = await stagePublishDir();
   console.log(`  → Deploying ${publishDir} to ${siteName}...`);
-  // NOTE: `--json` on `deploy` can throw a 422 in this CLI version, so we parse
-  // the human-readable output instead.
-  const deployRaw = await netlify(['deploy', '--prod', '--dir', publishDir, '--site', siteId]);
-  const m = deployRaw.match(/Website URL:\s*(https:\/\/\S+)/i) || deployRaw.match(/(https:\/\/[a-z0-9-]+\.netlify\.app)\b/i);
-  const url = m ? m[1] : '';
-  if (!url) fail(`No live URL found in deploy output:\n${deployRaw}`);
+  const { url } = await deployDir({ dir: publishDir, siteId });
 
   // --- 4. Confirm HTTP 200 ---
   console.log(`  → Verifying ${url} ...`);

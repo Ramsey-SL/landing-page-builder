@@ -45,6 +45,16 @@ CLI stays working (wrappers call `src/`), so nothing we shipped regresses.
 
 ## Phase 0 — Library-ize the engine
 
+> **Status: DONE.** Engine lives in `src/` (scrape, images, recipe, sections,
+> page/renderRecipe, audit, brand, publish/netlify, types). `tools/*` are thin
+> CLIs over it; `tools/render.js` moved to `src/render.js`. Verified: PNW
+> rebuilds identical (56.6 KB / 43.3 KB), distinct products + hover preserved,
+> mobile Lighthouse 99/100/96/100, smoke 37/37.
+> Deviations from the sketch below: CLIs stay in `tools/` (not `cli/`) to keep
+> npm scripts/CI/docs stable; `renderRecipe` targets the single shell template
+> for now (full section-library generalization is Phase 3); `publish/zip.js`
+> deferred to the Phase 1 export feature.
+
 **Goal:** every capability is an importable function returning data (no
 `process.exit`, no `console.log` as control flow) so the worker can call it.
 
