@@ -1,0 +1,1757 @@
+{
+  "url": "https://thegreatpnw.com/collections/smokey-bear-pnw",
+  "slug": "pnw-smokey-bear",
+  "pageTitle": "Smokey Bear – The Great PNW",
+  "metaDescription": "Our love for the Pacific NorthWest runs deep, and we embody that passion in every design we produce so you can wear your gear with pride. Stay Wild.",
+  "h1": [
+    "Smokey Bear"
+  ],
+  "h1Derived": true,
+  "h2": [
+    "Shop by collection",
+    "Sign up & save",
+    "More Info",
+    "CUSTOMER SERVICE"
+  ],
+  "h3": [
+    "Babes Tee",
+    "Ranger Flat Bill Hat - Black",
+    "Prevent Hoodie – Safety Orange",
+    "Summer Camp Sock - 2 Pack",
+    "Navigator Flannel – Brown/Orange",
+    "Navigator Flannel – Teal/Orange",
+    "Smokey Bear Sticker Pack",
+    "Little Smokey Hoodie",
+    "Prevent Tee",
+    "Knowledge Tee",
+    "Heritage Sock - 2 Pack",
+    "Icon Tee – Navy",
+    "Icon Tee – Athletic Gray",
+    "Range Sock - 2 Pack",
+    "Smokey Icon Sticker",
+    "Icon Crewneck",
+    "Vintage Keychain",
+    "Careful Tee",
+    "Courage Hoodie",
+    "Courage Tee – Black",
+    "Courage Tee – Orange",
+    "Rescue Bucket Hat",
+    "Smokey Icon 16oz Mug",
+    "Hatchet Short – Smokey Bear Brown",
+    "Embark Keychain",
+    "Smokey Scout Button-up",
+    "Hatchet Pants – Smokey Bear Brown",
+    "Evergreen Keychain",
+    "Salute Hat",
+    "Smokey Duffle Bag",
+    "Track DayPak",
+    "Embers Hoodie",
+    "If Not Crewneck",
+    "Firewatch Backpack",
+    "Remember! Tee",
+    "Embers tee",
+    "Smokey Pennant – Careful",
+    "Smokey Pennant – Embers",
+    "Smokey Pennant – Prevent",
+    "Signature Hat",
+    "Smokey Camp Flag – Embers",
+    "Smokey Camp Flag – Careful",
+    "Only You Enamel Mug – Brown",
+    "Only You Enamel Mug – Gold",
+    "Only You Enamel Mug – Cream",
+    "Prevent Hoodie – Black",
+    "Ranger Flat Bill Hat - Bark",
+    "Harvest DayPak - Blue",
+    "Ranger Flat Bill Hat - Forest",
+    "Wildfire Hat",
+    "Only You Water Bottle",
+    "Prevent Coaster 4-PK",
+    "Knowledge Coaster 4-PK",
+    "Vigilance Hat",
+    "Protect Trucker Hat",
+    "Smokey Bear Bandana",
+    "Best Sellers",
+    "Smokey Bear",
+    "Hats",
+    "Tees",
+    "Fleece & Flannels",
+    "Upper Left, USA™",
+    "Woodsy",
+    "Outerwear",
+    "Bags",
+    "Drinkware"
+  ],
+  "heroImage": {
+    "src": "https://thegreatpnw.com/cdn/shop/files/Smokey-Website-Header-Desktop-v2a.jpg?v=1761761566&width=1920",
+    "alt": "image"
+  },
+  "allImages": [
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-collection-image.jpg?v=1778819889&width=900",
+      "alt": "image",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Hatchet_Short_Label.webp?v=1780602902&width=900",
+      "alt": "image",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/shipping_truck_image.webp?v=1773400090",
+      "alt": "image",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_Long_Logo.svg?v=1775164631&width=180",
+      "alt": "image",
+      "width": 300,
+      "height": 63
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_Long_Logo.svg?v=1775164631&width=200",
+      "alt": "image",
+      "width": 300,
+      "height": 63
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/R_rotate_2.gif?v=1748012018&width=100",
+      "alt": "image",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Smokey_Bear.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Sales.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Headwear.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Tees.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Pants.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Button_Up_-_Short_Sleeve.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Fleece_-_Hoodie.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Flannel.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Bags.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Socks.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Drinkware.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Club_-_ULC.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Smokey-Website-Header-Desktop-v2a.jpg?v=1761761566&width=1920",
+      "alt": "image",
+      "width": 1366,
+      "height": 357
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Smokey-Website-Header-Mobile-v2a.jpg?v=1761765096&width=1200",
+      "alt": "image",
+      "width": 1229,
+      "height": 882
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/babestee_defaultfloat.jpg?v=1775758433&width=900",
+      "alt": "Babes Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/babestee_deafult2_femalemodel_3.jpg?v=1775758433&width=900",
+      "alt": "Babes Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/crt-crt-ranger-flat-bill-blk.jpg?v=1778607155&width=900",
+      "alt": "Ranger Flat Bill Hat - Black - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/products/2022_07_04_PNW_SMOKEY_BEAR_WEB_HAT_RANGER_LIFESTYLE.jpg?v=1776363943&width=900",
+      "alt": "Ranger Flat Bill Hat - Black - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventhoodie_defaultfloat_orange.jpg?v=1775778537&width=900",
+      "alt": "Prevent Hoodie - Safety Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventhoodie_Deafultfloat_orange.jpg?v=1775778537&width=900",
+      "alt": "Prevent Hoodie - Safety Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/twopack_summercampsocks_Deafult.jpg?v=1775774747&width=900",
+      "alt": "Summer Camp Sock - 2 Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_08_07_PNW_SMOKEY_SOCK_SUMMERCAMP_V2_LIFESTYLE_01.jpg?v=1775774747&width=900",
+      "alt": "Summer Camp Sock - 2 Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/navigatorflannel-default-flioater.jpg?v=1775776338&width=900",
+      "alt": "Navigator Flannel - Brown/Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2024_07_29_PNW_SMOKEY_LIFESTYLE_FLANNEL_01.jpg?v=1775776338&width=900",
+      "alt": "Navigator Flannel - Brown/Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/navigatorflannel-teal-default-floater.jpg?v=1775776338&width=900",
+      "alt": "Navigator Flannel - Teal/Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/navf.jpg?v=1775776338&width=900",
+      "alt": "Navigator Flannel - Teal/Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_Stickerpack_default.jpg?v=1775777665&width=900",
+      "alt": "Smokey Bear Sticker Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/products/2022_12_29_PNW_SMOKEY_STICKER_PACK_PRODUCT_02-1.jpg?v=1775777665&width=900",
+      "alt": "Smokey Bear Sticker Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/littlesmokeyhoodie_Deaultfloat.jpg?v=1775773668&width=900",
+      "alt": "Little Smokey Hoodie - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/littlesmokeyhoodie_default1_malemodel_3.jpg?v=1775773668&width=900",
+      "alt": "Little Smokey Hoodie - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventtee_Deafultfloat.jpg?v=1775768684&width=900",
+      "alt": "Prevent Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventtee_default2_femalemodel_3.jpg?v=1775768684&width=900",
+      "alt": "Prevent Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/knowledgetee_Default2_backside.jpg?v=1775770643&width=900",
+      "alt": "Knowledge Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/knowledgetee_default2_back_malemodel_2.jpg?v=1775770643&width=900",
+      "alt": "Knowledge Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/heritage-two-pack-default-floater.jpg?v=1775776527&width=900",
+      "alt": "Heritage Sock - 2 Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/heritage_socks_Default_creme.jpg?v=1775776537&width=900",
+      "alt": "Heritage Sock - 2 Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/icontee_blue_defaultfloat.jpg?v=1775770728&width=900",
+      "alt": "Icon Tee - Navy",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/icontee_deafult1_model_2.jpg?v=1775770728&width=900",
+      "alt": "Icon Tee - Navy",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_icontee_grey_default.jpg?v=1775770728&width=900",
+      "alt": "Icon Tee - Athletic Gray",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/icontee_grey_feamlemodel_3.jpg?v=1775770728&width=900",
+      "alt": "Icon Tee - Athletic Gray",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/twopack_rangesocks_Default.jpg?v=1775775029&width=900",
+      "alt": "Range Sock - 2 Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rangesocks_Default_orange.jpg?v=1775775029&width=900",
+      "alt": "Range Sock - 2 Pack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeyiconsticker_Default.jpg?v=1775778600&width=900",
+      "alt": "Smokey Icon Sticker - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2024_07_23_PNW_SMOKEY_ACCESSORIES_PRODUCT_ICON_STICKER_02.jpg?v=1775778600&width=900",
+      "alt": "Smokey Icon Sticker - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/iconcrewneck_defaultfloat.jpg?v=1775773770&width=900",
+      "alt": "Icon Crewneck - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/icon.jpg?v=1775773770&width=900",
+      "alt": "Icon Crewneck - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/vintagekeychain_smokeybear.jpg?v=1775777752&width=900",
+      "alt": "Vintage Keychain - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/vintage_keychain_deafult.jpg?v=1775777761&width=900",
+      "alt": "Vintage Keychain - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/careefulltee_Defaultfloat.jpg?v=1775769182&width=900",
+      "alt": "Careful Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_carefultee.jpg?v=1775769182&width=900",
+      "alt": "Careful Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/courage-hoodie-default-floater-backside.jpg?v=1775776031&width=900",
+      "alt": "Courage Hoodie - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/couragehoodie_defaultfloat.jpg?v=1775776031&width=900",
+      "alt": "Courage Hoodie - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/couragetee_default_black_back.jpg?v=1775770871&width=900",
+      "alt": "Courage Tee - Black",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/couragetee_back_malemodel_2_defaultbackside2.jpg?v=1775770871&width=900",
+      "alt": "Courage Tee - Black",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/couragetee_orange_defaultfloater.jpg?v=1775770871&width=900",
+      "alt": "Courage Tee - Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/malemodel_2_couragetee_orangeback_deafult1.jpg?v=1775770871&width=900",
+      "alt": "Courage Tee - Orange",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rescue-bucket-hat-defualt-1.jpg?v=1776363788&width=900",
+      "alt": "Rescue Bucket Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_HEADWEAR_WEB_RESCUE_BUCKET_HAT_LIFESTYLE_01.jpg?v=1776363788&width=900",
+      "alt": "Rescue Bucket Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokey16ozmug_defaultfloater.jpg?v=1775776864&width=900",
+      "alt": "Smokey Icon 16oz Mug - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/hatchet-short---variant---smokey-bear---layflat.jpg?v=1780518638&width=900",
+      "alt": "Hatchet Short - Smokey Bear Brown",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/short-smokey-variant-lifestlye-1.jpg?v=1780498312&width=900",
+      "alt": "Hatchet Short - Smokey Bear Brown",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/embark_keychain_Default.jpg?v=1775777869&width=900",
+      "alt": "Embark Keychain - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/embark_keychain_Deafult2.jpg?v=1775777869&width=900",
+      "alt": "Embark Keychain - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/sscoutbuttonup_Deafultfloat.jpg?v=1775778229&width=900",
+      "alt": "Smokey Scout Button-up - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybuttonupfront.jpg?v=1775778229&width=900",
+      "alt": "Smokey Scout Button-up - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/hatchet-pants---brown---smokey_013271ec-a4df-4c17-b702-8a126b1cd90f.jpg?v=1780433741&width=900",
+      "alt": "Hatchet Pants - Smokey Bear Brown",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokey-variant-pant-lifestyle-1.jpg?v=1780498252&width=900",
+      "alt": "Hatchet Pants - Smokey Bear Brown",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/evergreen_keychain_default.jpg?v=1775777986&width=900",
+      "alt": "Evergreen Keychain - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/evergreen_keychain_default2.jpg?v=1775777996&width=900",
+      "alt": "Evergreen Keychain - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/salute-hat-default-1.jpg?v=1776363761&width=900",
+      "alt": "Salute Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2025_Smokey_Hat_Salute_Lifestyle_New.jpg?v=1776363761&width=900",
+      "alt": "Salute Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeyduffle-default-floatter-3-3-26.jpg?v=1775774457&width=900",
+      "alt": "Smokey Duffle Bag - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2024_07_29_PNW_SMOKEY_DUFFEL_LIFESTYLE_BRONZE_02_b6701e5c-8fc3-4005-8ee8-11e39475727e.jpg?v=1775774457&width=900",
+      "alt": "Smokey Duffle Bag - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_daypak_orange.jpg?v=1775774271&width=900",
+      "alt": "Track DayPak - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_DAYPAK_TRACK_LIFESTYLE_02.jpg?v=1775774271&width=900",
+      "alt": "Track DayPak - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/embershoodie_Defaultfloat.jpg?v=1775773603&width=900",
+      "alt": "Embers Hoodie - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/embershoodie_Defaultfloat_front.jpg?v=1775773603&width=900",
+      "alt": "Embers Hoodie - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/ifnotnow_crewneck_Dafultfloat.jpg?v=1775773721&width=900",
+      "alt": "If Not Crewneck - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/ifnotnowcrewneck_default1_malemodel_2.jpg?v=1775773721&width=900",
+      "alt": "If Not Crewneck - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/firewatch-backpack-default-floatter-3-3-26copy.webp?v=1781891935&width=900",
+      "alt": "Firewatch Backpack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/inside1.jpg?v=1775774400&width=900",
+      "alt": "Firewatch Backpack - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/remembertee_Defaultfloat.jpg?v=1775771126&width=900",
+      "alt": "Remember! Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/remember_-tee_defaultfloat.jpg?v=1775771126&width=900",
+      "alt": "Remember! Tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/emberstee_Defaultfloat_backside.jpg?v=1775771056&width=900",
+      "alt": "Embers tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/emberstee_backside_default2_model_2.jpg?v=1775771056&width=900",
+      "alt": "Embers tee - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_pendantflag_brown.jpg?v=1775778694&width=900",
+      "alt": "Smokey Pennant - Careful",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_pendantflag_green.jpg?v=1775778671&width=900",
+      "alt": "Smokey Pennant - Careful",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeypennant_creme.jpg?v=1775778694&width=900",
+      "alt": "Smokey Pennant - Embers",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_2025_Smokey_Bear_Pennants_Lifestylev2a.jpg?v=1775778694&width=900",
+      "alt": "Smokey Pennant - Embers",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokey-signature-hat-default-1.jpg?v=1776363442&width=900",
+      "alt": "Signature Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/felthatfront.jpg?v=1776363442&width=900",
+      "alt": "Signature Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_campflag_white.jpg?v=1775778163&width=900",
+      "alt": "Smokey Camp Flag - Embers",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_2025_Smokey_Bear_Camp_Flags_Lifestylev2a.jpg?v=1775778163&width=900",
+      "alt": "Smokey Camp Flag - Embers",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_campflag_default.jpg?v=1775778163&width=900",
+      "alt": "Smokey Camp Flag - Careful",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_mug_default_brown2.jpg?v=1775777032&width=900",
+      "alt": "Only You Enamel Mug - Brown",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_default_white_front.jpg?v=1775777032&width=900",
+      "alt": "Only You Enamel Mug - Brown",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_mug_yellow_default2.jpg?v=1775777020&width=900",
+      "alt": "Only You Enamel Mug - Gold",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_mug_default_white.jpg?v=1775776944&width=900",
+      "alt": "Only You Enamel Mug - Gold",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2024_06_28_PNW_ONLY_YOU_MUG_WEB_01_55c9f5ad-ad9e-400a-819a-376c36063c62.jpg?v=1775777032&width=900",
+      "alt": "Only You Enamel Mug - Cream",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventhoodieblack_defaultfloat.jpg?v=1775778537&width=900",
+      "alt": "Prevent Hoodie - Black",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventhoodie_backside_malemodel_3.jpg?v=1775778537&width=900",
+      "alt": "Prevent Hoodie - Black",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/ranger-flat-bill-orange.jpg?v=1776363851&width=900",
+      "alt": "Ranger Flat Bill Hat - Bark - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/ranger-flat-bill-ornage.jpg?v=1776364818&width=900",
+      "alt": "Ranger Flat Bill Hat - Bark - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/harvestblue_daypak_defaultfloat.jpg?v=1775774527&width=900",
+      "alt": "Harvest DayPak - Blue - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2024_04_25_PNW_SMOKEY_BEAR_HARVEST_DAYPAK_03.jpg?v=1775774527&width=900",
+      "alt": "Harvest DayPak - Blue - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/ranger-falt-bill-default-grey.jpg?v=1776363833&width=900",
+      "alt": "Ranger Flat Bill Hat - Forest - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_HEADWEAR_WEB_RANGER_HAT_FOREST_LIFESTYLE_01.jpg?v=1776363833&width=900",
+      "alt": "Ranger Flat Bill Hat - Forest - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/wildfire-headwear.jpg?v=1776363807&width=900",
+      "alt": "Wildfire Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_HEADWEAR_WEB_WILDFIRE_HAT_LIFESTYLE_02.jpg?v=1776363807&width=900",
+      "alt": "Wildfire Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeyonlyyou_waterbottle_default1.jpg?v=1775776823&width=900",
+      "alt": "Only You Water Bottle - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybearonlyyou_waterbottle_Default2_backside.jpg?v=1775776823&width=900",
+      "alt": "Only You Water Bottle - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/preventcoaster_default.jpg?v=1775777374&width=900",
+      "alt": "Prevent Coaster 4-PK - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_ACCESSORIES_COASTERS_PREVENT_03.jpg?v=1775777374&width=900",
+      "alt": "Prevent Coaster 4-PK - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/knowledgecoaster_Default.jpg?v=1775777188&width=900",
+      "alt": "Knowledge Coaster 4-PK - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_ACCESSORIES_COASTERS_KNOWLEDGE_03.jpg?v=1775777188&width=900",
+      "alt": "Knowledge Coaster 4-PK - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/vigilance-default-hat-1.jpg?v=1776363402&width=900",
+      "alt": "Vigilance Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybadgehat.jpg?v=1776363402&width=900",
+      "alt": "Vigilance Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/protect-trucker-hat.jpg?v=1776363422&width=900",
+      "alt": "Protect Trucker Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/corduroyhatfront.jpg?v=1776363422&width=900",
+      "alt": "Protect Trucker Hat - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/smokeybear_bandana_default.jpg?v=1776111889&width=900",
+      "alt": "Smokey Bear Bandana - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/BANDANALIFESTYLE.jpg?v=1776111889&width=900",
+      "alt": "Smokey Bear Bandana - The Great PNW",
+      "width": 900,
+      "height": 982
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_SMOKEYBEAR_FUND_PRODUCT_IMG_01_632eb01b-e77d-4a3d-ad36-9cb96abf6a7a.jpg?v=1761669722&width=1080",
+      "alt": "image",
+      "width": 1366,
+      "height": 323
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/core_collection_image.jpg?v=1774479499&width=600",
+      "alt": "Best Sellers",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Smokey.jpg?v=1734553481&width=600",
+      "alt": "Smokey Bear",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Headwear.jpg?v=1759343868&width=600",
+      "alt": "Hats",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/tees.jpg?v=1759343539&width=600",
+      "alt": "Tees",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/SWEATSHIRTS_DESKTOP_600x_a5328843-ceae-4aa2-8671-c80611d108fa.webp?v=1716038516&width=600",
+      "alt": "Fleece & Flannels",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Miller_M.jpg?v=1716413033&width=600",
+      "alt": "Upper Left, USA™",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Woodsy.jpg?v=1716110710&width=600",
+      "alt": "Woodsy",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Outerwear_M-_1.jpg?v=1734554938&width=600",
+      "alt": "Outerwear",
+      "width": 310,
+      "height": 310
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Bags.jpg?v=1716352727&width=600",
+      "alt": "Bags",
+      "width": 310,
+      "height": 310
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Drinkware.jpg?v=1716101990&width=600",
+      "alt": "Drinkware",
+      "width": 310,
+      "height": 310
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW-logo-full-white-email.png?v=1631723609&width=200",
+      "alt": "image",
+      "width": 200,
+      "height": 42
+    },
+    {
+      "src": "https://d3k81ch9hvuctc.cloudfront.net/company/LKmnDZ/images/0504cf61-091b-4b38-84b1-e3a0a8dedd0b.jpeg",
+      "alt": "The Great PNW Mustard Yellow Tee and mesh-back trucker hat styled with work gloves for a Pacific Northwest lifestyle",
+      "width": 985,
+      "height": 1074
+    }
+  ],
+  "ctaButtons": [
+    {
+      "text": "icon-X \"Close\"",
+      "href": ""
+    },
+    {
+      "text": "icon-X Close menu",
+      "href": ""
+    },
+    {
+      "text": "SHOP",
+      "href": ""
+    },
+    {
+      "text": "Apparel",
+      "href": ""
+    },
+    {
+      "text": "Accessories",
+      "href": ""
+    },
+    {
+      "text": "Featured",
+      "href": ""
+    },
+    {
+      "text": "SHOP BY COLLECTION",
+      "href": ""
+    },
+    {
+      "text": "ABOUT US",
+      "href": ""
+    },
+    {
+      "text": "UPPER LEFT CLUB",
+      "href": ""
+    },
+    {
+      "text": "icon-X Close cart",
+      "href": ""
+    },
+    {
+      "text": "Check out",
+      "href": ""
+    },
+    {
+      "text": "icon-hamburger Site navigation",
+      "href": ""
+    },
+    {
+      "text": "icon-cartCart",
+      "href": "https://thegreatpnw.com/cart"
+    },
+    {
+      "text": "All",
+      "href": ""
+    },
+    {
+      "text": "Tees",
+      "href": ""
+    },
+    {
+      "text": "Button-Ups",
+      "href": ""
+    },
+    {
+      "text": "Bottoms",
+      "href": ""
+    },
+    {
+      "text": "Headwear",
+      "href": ""
+    },
+    {
+      "text": "Bags",
+      "href": ""
+    },
+    {
+      "text": "Fleece",
+      "href": ""
+    },
+    {
+      "text": "Sign up & save",
+      "href": ""
+    },
+    {
+      "text": "icon-email Subscribe",
+      "href": ""
+    },
+    {
+      "text": "More Info",
+      "href": ""
+    },
+    {
+      "text": "CUSTOMER SERVICE",
+      "href": ""
+    },
+    {
+      "text": "icon-X \"Close (esc)\"",
+      "href": ""
+    },
+    {
+      "text": "icon-chevron-left",
+      "href": ""
+    },
+    {
+      "text": "icon-X",
+      "href": ""
+    },
+    {
+      "text": "icon-chevron",
+      "href": ""
+    },
+    {
+      "text": "Enable accessibility",
+      "href": ""
+    },
+    {
+      "text": "Close icon Close accessibility",
+      "href": ""
+    },
+    {
+      "text": "Reset All Checked mark Statement",
+      "href": ""
+    },
+    {
+      "text": "Reset All",
+      "href": ""
+    },
+    {
+      "text": "Checked mark Statement",
+      "href": ""
+    },
+    {
+      "text": "Adjust font size Checked mark Font Size",
+      "href": ""
+    },
+    {
+      "text": "Screen Reader Checked mark Screen Reader",
+      "href": ""
+    },
+    {
+      "text": "Highlight Links Checked mark Highlight Links",
+      "href": ""
+    },
+    {
+      "text": "Change Cursor Checked mark Cursor",
+      "href": ""
+    },
+    {
+      "text": "Line Height Checked mark Line Height",
+      "href": ""
+    },
+    {
+      "text": "Letter Spacing Checked mark Letter Spacing",
+      "href": ""
+    },
+    {
+      "text": "Stop Animations Checked mark Stop Animation",
+      "href": ""
+    },
+    {
+      "text": "Mute sounds Checked mark Mute Sounds",
+      "href": ""
+    },
+    {
+      "text": "Hide Image Checked mark Hide Images",
+      "href": ""
+    },
+    {
+      "text": "Change text color to red",
+      "href": ""
+    },
+    {
+      "text": "Change text color to blue",
+      "href": ""
+    },
+    {
+      "text": "Change text color to green",
+      "href": ""
+    },
+    {
+      "text": "Change text color to purple",
+      "href": ""
+    },
+    {
+      "text": "Change text color to orange",
+      "href": ""
+    },
+    {
+      "text": "Change text color to teal",
+      "href": ""
+    },
+    {
+      "text": "Change text color to black",
+      "href": ""
+    },
+    {
+      "text": "Change text color to white",
+      "href": ""
+    },
+    {
+      "text": "Reset",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to red",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to blue",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to green",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to purple",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to orange",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to teal",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to black",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to white",
+      "href": ""
+    },
+    {
+      "text": "Change background color to red",
+      "href": ""
+    },
+    {
+      "text": "Change background color to blue",
+      "href": ""
+    },
+    {
+      "text": "Change background color to green",
+      "href": ""
+    },
+    {
+      "text": "Change background color to purple",
+      "href": ""
+    },
+    {
+      "text": "Change background color to orange",
+      "href": ""
+    },
+    {
+      "text": "Change background color to teal",
+      "href": ""
+    },
+    {
+      "text": "Change background color to black",
+      "href": ""
+    },
+    {
+      "text": "Change background color to white",
+      "href": ""
+    },
+    {
+      "text": "Close dialog",
+      "href": ""
+    },
+    {
+      "text": "CONTINUE",
+      "href": ""
+    },
+    {
+      "text": "Submit",
+      "href": ""
+    }
+  ],
+  "navLinks": [
+    {
+      "text": "Apparel",
+      "href": "https://thegreatpnw.com/collections/all-apparel"
+    },
+    {
+      "text": "All",
+      "href": "https://thegreatpnw.com/collections/all-apparel"
+    },
+    {
+      "text": "Tees",
+      "href": "https://thegreatpnw.com/collections/mens-tees"
+    },
+    {
+      "text": "Hats",
+      "href": "https://thegreatpnw.com/collections/headwear"
+    },
+    {
+      "text": "Bottoms",
+      "href": "https://thegreatpnw.com/collections/bottoms"
+    },
+    {
+      "text": "Fleece",
+      "href": "https://thegreatpnw.com/collections/fleece-2"
+    },
+    {
+      "text": "Flannels",
+      "href": "https://thegreatpnw.com/collections/flannels"
+    },
+    {
+      "text": "Button Ups",
+      "href": "https://thegreatpnw.com/collections/button-ups"
+    },
+    {
+      "text": "Outerwear",
+      "href": "https://thegreatpnw.com/collections/outerwear"
+    },
+    {
+      "text": "Accessories",
+      "href": "https://thegreatpnw.com/collections/accessories-2"
+    },
+    {
+      "text": "All",
+      "href": "https://thegreatpnw.com/collections/accessories-2"
+    },
+    {
+      "text": "Bags",
+      "href": "https://thegreatpnw.com/collections/bags"
+    },
+    {
+      "text": "Socks",
+      "href": "https://thegreatpnw.com/collections/socks"
+    },
+    {
+      "text": "Stickers & Decals",
+      "href": "https://thegreatpnw.com/collections/stickers"
+    },
+    {
+      "text": "Drinkware",
+      "href": "https://thegreatpnw.com/collections/drinkware"
+    },
+    {
+      "text": "Posters",
+      "href": "https://thegreatpnw.com/collections/posters"
+    },
+    {
+      "text": "Featured",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw#"
+    },
+    {
+      "text": "Apex Tee",
+      "href": "https://thegreatpnw.com/products/apex-tee-1"
+    },
+    {
+      "text": "Pants & Shorts",
+      "href": "https://thegreatpnw.com/collections/bottoms"
+    },
+    {
+      "text": "Smokey Bear Collection",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+    },
+    {
+      "text": "Essentials",
+      "href": "https://thegreatpnw.com/collections/essentials"
+    },
+    {
+      "text": "SALE",
+      "href": "https://thegreatpnw.com/collections/sale"
+    },
+    {
+      "text": "Rainier X The Great PNW",
+      "href": "https://thegreatpnw.com/collections/rainier-26"
+    },
+    {
+      "text": "Hatchet Shorts",
+      "href": "https://thegreatpnw.com/collections/bottoms"
+    },
+    {
+      "text": "Best Sellers",
+      "href": "https://thegreatpnw.com/collections/core-collection"
+    },
+    {
+      "text": "Smokey Bear",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+    },
+    {
+      "text": "Upper Left, USA™",
+      "href": "https://thegreatpnw.com/collections/upperleftusa"
+    },
+    {
+      "text": "Woodsy",
+      "href": "https://thegreatpnw.com/collections/woodsy"
+    },
+    {
+      "text": "Meet The Team",
+      "href": "https://thegreatpnw.com/pages/team"
+    },
+    {
+      "text": "Our Story",
+      "href": "https://thegreatpnw.com/pages/our-story"
+    },
+    {
+      "text": "Behind The Brand",
+      "href": "https://thegreatpnw.com/pages/behind-the-brand"
+    },
+    {
+      "text": "Learn More",
+      "href": "https://thegreatpnw.com/pages/upper-left-club"
+    },
+    {
+      "text": "account Log in",
+      "href": "https://thegreatpnw.com/account"
+    },
+    {
+      "text": "icon-search Search",
+      "href": "https://thegreatpnw.com/search"
+    },
+    {
+      "text": "icon-cartCart",
+      "href": "https://thegreatpnw.com/cart"
+    },
+    {
+      "text": "Rainier",
+      "href": "https://thegreatpnw.com/collections/rainier-26"
+    },
+    {
+      "text": "Club",
+      "href": "https://thegreatpnw.com/pages/upper-left-club"
+    }
+  ],
+  "collectionName": "Smokey Bear",
+  "productCards": [
+    {
+      "name": "Babes Tee",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/babestee_defaultfloat.jpg?v=1775758433&width=900",
+      "imageAlt": "Babes Tee - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/babestee_deafult2_femalemodel_3.jpg?v=1775758433&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/babes-tee"
+    },
+    {
+      "name": "Ranger Flat Bill Hat - Black",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/crt-crt-ranger-flat-bill-blk.jpg?v=1778607155&width=900",
+      "imageAlt": "Ranger Flat Bill Hat - Black - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/products/2022_07_04_PNW_SMOKEY_BEAR_WEB_HAT_RANGER_LIFESTYLE.jpg?v=1776363943&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/ranger-flat-bill-hat"
+    },
+    {
+      "name": "Prevent Hoodie – Safety Orange",
+      "price": "$67.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/preventhoodie_defaultfloat_orange.jpg?v=1775778537&width=900",
+      "imageAlt": "Prevent Hoodie - Safety Orange",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/preventhoodie_Deafultfloat_orange.jpg?v=1775778537&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/prevent-hoodie?variant=42554923155613"
+    },
+    {
+      "name": "Summer Camp Sock - 2 Pack",
+      "price": "$19.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/twopack_summercampsocks_Deafult.jpg?v=1775774747&width=900",
+      "imageAlt": "Summer Camp Sock - 2 Pack - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_08_07_PNW_SMOKEY_SOCK_SUMMERCAMP_V2_LIFESTYLE_01.jpg?v=1775774747&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/summer-camp-sock"
+    },
+    {
+      "name": "Navigator Flannel – Brown/Orange",
+      "price": "$64.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/navigatorflannel-default-flioater.jpg?v=1775776338&width=900",
+      "imageAlt": "Navigator Flannel - Brown/Orange",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2024_07_29_PNW_SMOKEY_LIFESTYLE_FLANNEL_01.jpg?v=1775776338&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/navigator-flannel?variant=48980427505952"
+    },
+    {
+      "name": "Smokey Bear Sticker Pack",
+      "price": "$14.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeybear_Stickerpack_default.jpg?v=1775777665&width=900",
+      "imageAlt": "Smokey Bear Sticker Pack - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/products/2022_12_29_PNW_SMOKEY_STICKER_PACK_PRODUCT_02-1.jpg?v=1775777665&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/smokey-bear-sticker-pack"
+    },
+    {
+      "name": "Little Smokey Hoodie",
+      "price": "$72.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/littlesmokeyhoodie_Deaultfloat.jpg?v=1775773668&width=900",
+      "imageAlt": "Little Smokey Hoodie - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/littlesmokeyhoodie_default1_malemodel_3.jpg?v=1775773668&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/little-smokey-hoodie"
+    },
+    {
+      "name": "Prevent Tee",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/preventtee_Deafultfloat.jpg?v=1775768684&width=900",
+      "imageAlt": "Prevent Tee - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/preventtee_default2_femalemodel_3.jpg?v=1775768684&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/prevent-tee"
+    },
+    {
+      "name": "Knowledge Tee",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/knowledgetee_Default2_backside.jpg?v=1775770643&width=900",
+      "imageAlt": "Knowledge Tee - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/knowledgetee_default2_back_malemodel_2.jpg?v=1775770643&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/knowledge-tee"
+    },
+    {
+      "name": "Heritage Sock - 2 Pack",
+      "price": "$19.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/heritage-two-pack-default-floater.jpg?v=1775776527&width=900",
+      "imageAlt": "Heritage Sock - 2 Pack - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/heritage_socks_Default_creme.jpg?v=1775776537&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/heritage-sock"
+    },
+    {
+      "name": "Icon Tee – Navy",
+      "price": "$35.99",
+      "imageSrc": "",
+      "imageAlt": "",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/icon-tee?variant=47010212970784"
+    },
+    {
+      "name": "Range Sock - 2 Pack",
+      "price": "$19.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/twopack_rangesocks_Default.jpg?v=1775775029&width=900",
+      "imageAlt": "Range Sock - 2 Pack - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/rangesocks_Default_orange.jpg?v=1775775029&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/range-sock"
+    },
+    {
+      "name": "Smokey Icon Sticker",
+      "price": "$5.99",
+      "imageSrc": "",
+      "imageAlt": "",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/smokey-icon-sticker"
+    },
+    {
+      "name": "Icon Crewneck",
+      "price": "$61.99",
+      "imageSrc": "",
+      "imageAlt": "",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/icon-crewneck"
+    },
+    {
+      "name": "Vintage Keychain",
+      "price": "$9.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/vintagekeychain_smokeybear.jpg?v=1775777752&width=900",
+      "imageAlt": "Vintage Keychain - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/vintage_keychain_deafult.jpg?v=1775777761&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/vintage-keychain"
+    },
+    {
+      "name": "Careful Tee",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/careefulltee_Defaultfloat.jpg?v=1775769182&width=900",
+      "imageAlt": "Careful Tee - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/smokeybear_carefultee.jpg?v=1775769182&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/careful-tee"
+    },
+    {
+      "name": "Courage Hoodie",
+      "price": "$67.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/courage-hoodie-default-floater-backside.jpg?v=1775776031&width=900",
+      "imageAlt": "Courage Hoodie - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/couragehoodie_defaultfloat.jpg?v=1775776031&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/courage-hoodie"
+    },
+    {
+      "name": "Courage Tee – Black",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/couragetee_default_black_back.jpg?v=1775770871&width=900",
+      "imageAlt": "Courage Tee - Black",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/couragetee_back_malemodel_2_defaultbackside2.jpg?v=1775770871&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/courage-tee?variant=46581221916960"
+    },
+    {
+      "name": "Rescue Bucket Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rescue-bucket-hat-defualt-1.jpg?v=1776363788&width=900",
+      "imageAlt": "Rescue Bucket Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_HEADWEAR_WEB_RESCUE_BUCKET_HAT_LIFESTYLE_01.jpg?v=1776363788&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/rescue-bucket-hat"
+    },
+    {
+      "name": "Smokey Icon 16oz Mug",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokey16ozmug_defaultfloater.jpg?v=1775776864&width=900",
+      "imageAlt": "Smokey Icon 16oz Mug - The Great PNW",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/smokey-icon-16oz-mug"
+    },
+    {
+      "name": "Hatchet Short – Smokey Bear Brown",
+      "price": "$59.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/hatchet-short---variant---smokey-bear---layflat.jpg?v=1780518638&width=900",
+      "imageAlt": "Hatchet Short - Smokey Bear Brown",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/short-smokey-variant-lifestlye-1.jpg?v=1780498312&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/hatchet-shorts?variant=51399933133088"
+    },
+    {
+      "name": "Embark Keychain",
+      "price": "$9.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/embark_keychain_Default.jpg?v=1775777869&width=900",
+      "imageAlt": "Embark Keychain - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/embark_keychain_Deafult2.jpg?v=1775777869&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/embark-keychain"
+    },
+    {
+      "name": "Smokey Scout Button-up",
+      "price": "$59.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/sscoutbuttonup_Deafultfloat.jpg?v=1775778229&width=900",
+      "imageAlt": "Smokey Scout Button-up - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/smokeybuttonupfront.jpg?v=1775778229&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/smokey-scout-button-up"
+    },
+    {
+      "name": "Hatchet Pants – Smokey Bear Brown",
+      "price": "$74.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/hatchet-pants---brown---smokey_013271ec-a4df-4c17-b702-8a126b1cd90f.jpg?v=1780433741&width=900",
+      "imageAlt": "Hatchet Pants - Smokey Bear Brown",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/smokey-variant-pant-lifestyle-1.jpg?v=1780498252&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/hatchet-pants-1?variant=51773834920224"
+    },
+    {
+      "name": "Evergreen Keychain",
+      "price": "$9.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/evergreen_keychain_default.jpg?v=1775777986&width=900",
+      "imageAlt": "Evergreen Keychain - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/evergreen_keychain_default2.jpg?v=1775777996&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/evergreen-keychain"
+    },
+    {
+      "name": "Salute Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/salute-hat-default-1.jpg?v=1776363761&width=900",
+      "imageAlt": "Salute Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2025_Smokey_Hat_Salute_Lifestyle_New.jpg?v=1776363761&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/salute-hat"
+    },
+    {
+      "name": "Smokey Duffle Bag",
+      "price": "$74.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeyduffle-default-floatter-3-3-26.jpg?v=1775774457&width=900",
+      "imageAlt": "Smokey Duffle Bag - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2024_07_29_PNW_SMOKEY_DUFFEL_LIFESTYLE_BRONZE_02_b6701e5c-8fc3-4005-8ee8-11e39475727e.jpg?v=1775774457&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/cannon-duffel-bag-smokey"
+    },
+    {
+      "name": "Track DayPak",
+      "price": "$36.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeybear_daypak_orange.jpg?v=1775774271&width=900",
+      "imageAlt": "Track DayPak - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_DAYPAK_TRACK_LIFESTYLE_02.jpg?v=1775774271&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/track-daypak"
+    },
+    {
+      "name": "Embers Hoodie",
+      "price": "$67.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/embershoodie_Defaultfloat.jpg?v=1775773603&width=900",
+      "imageAlt": "Embers Hoodie - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/embershoodie_Defaultfloat_front.jpg?v=1775773603&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/embers-hoodie"
+    },
+    {
+      "name": "If Not Crewneck",
+      "price": "$61.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/ifnotnow_crewneck_Dafultfloat.jpg?v=1775773721&width=900",
+      "imageAlt": "If Not Crewneck - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/ifnotnowcrewneck_default1_malemodel_2.jpg?v=1775773721&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/if-not-crewneck"
+    },
+    {
+      "name": "Firewatch Backpack",
+      "price": "$64.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/firewatch-backpack-default-floatter-3-3-26copy.webp?v=1781891935&width=900",
+      "imageAlt": "Firewatch Backpack - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/inside1.jpg?v=1775774400&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/firewatch-backpack"
+    },
+    {
+      "name": "Remember! Tee",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/remembertee_Defaultfloat.jpg?v=1775771126&width=900",
+      "imageAlt": "Remember! Tee - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/remember_-tee_defaultfloat.jpg?v=1775771126&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/remember-tee"
+    },
+    {
+      "name": "Embers tee",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/emberstee_Defaultfloat_backside.jpg?v=1775771056&width=900",
+      "imageAlt": "Embers tee - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/emberstee_backside_default2_model_2.jpg?v=1775771056&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/embers-tee"
+    },
+    {
+      "name": "Smokey Pennant – Careful",
+      "price": "$24.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeybear_pendantflag_brown.jpg?v=1775778694&width=900",
+      "imageAlt": "Smokey Pennant - Careful",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/smokeybear_pendantflag_green.jpg?v=1775778671&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/prevent-pennant-flag?variant=50233919111456"
+    },
+    {
+      "name": "Signature Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokey-signature-hat-default-1.jpg?v=1776363442&width=900",
+      "imageAlt": "Signature Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/felthatfront.jpg?v=1776363442&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/signature-hat"
+    },
+    {
+      "name": "Smokey Camp Flag – Embers",
+      "price": "$59.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeybear_campflag_white.jpg?v=1775778163&width=900",
+      "imageAlt": "Smokey Camp Flag - Embers",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/PNW_2025_Smokey_Bear_Camp_Flags_Lifestylev2a.jpg?v=1775778163&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/careful-camp-flag?variant=50233922421024"
+    },
+    {
+      "name": "Only You Enamel Mug – Brown",
+      "price": "$15.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeybear_mug_default_brown2.jpg?v=1775777032&width=900",
+      "imageAlt": "Only You Enamel Mug - Brown",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/smokeybear_default_white_front.jpg?v=1775777032&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/only-you-enamel-mug?variant=48861189144864"
+    },
+    {
+      "name": "Ranger Flat Bill Hat - Bark",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/ranger-flat-bill-orange.jpg?v=1776363851&width=900",
+      "imageAlt": "Ranger Flat Bill Hat - Bark - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/ranger-flat-bill-ornage.jpg?v=1776364818&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/ranger-flat-bill-hat-bark"
+    },
+    {
+      "name": "Harvest DayPak - Blue",
+      "price": "$36.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/harvestblue_daypak_defaultfloat.jpg?v=1775774527&width=900",
+      "imageAlt": "Harvest DayPak - Blue - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2024_04_25_PNW_SMOKEY_BEAR_HARVEST_DAYPAK_03.jpg?v=1775774527&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/harvest-daypak-navy"
+    },
+    {
+      "name": "Ranger Flat Bill Hat - Forest",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/ranger-falt-bill-default-grey.jpg?v=1776363833&width=900",
+      "imageAlt": "Ranger Flat Bill Hat - Forest - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_HEADWEAR_WEB_RANGER_HAT_FOREST_LIFESTYLE_01.jpg?v=1776363833&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/ranger-flat-bill-hat-forest"
+    },
+    {
+      "name": "Wildfire Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/wildfire-headwear.jpg?v=1776363807&width=900",
+      "imageAlt": "Wildfire Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_HEADWEAR_WEB_WILDFIRE_HAT_LIFESTYLE_02.jpg?v=1776363807&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/wildfire-hat"
+    },
+    {
+      "name": "Only You Water Bottle",
+      "price": "$15.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeyonlyyou_waterbottle_default1.jpg?v=1775776823&width=900",
+      "imageAlt": "Only You Water Bottle - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/smokeybearonlyyou_waterbottle_Default2_backside.jpg?v=1775776823&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/only-you-water-bottle"
+    },
+    {
+      "name": "Prevent Coaster 4-PK",
+      "price": "$14.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/preventcoaster_default.jpg?v=1775777374&width=900",
+      "imageAlt": "Prevent Coaster 4-PK - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_ACCESSORIES_COASTERS_PREVENT_03.jpg?v=1775777374&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/prevent-coaster-4-pk"
+    },
+    {
+      "name": "Knowledge Coaster 4-PK",
+      "price": "$14.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/knowledgecoaster_Default.jpg?v=1775777188&width=900",
+      "imageAlt": "Knowledge Coaster 4-PK - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/2023_09_06_PNW_SMOKEY_BEAR_ACCESSORIES_COASTERS_KNOWLEDGE_03.jpg?v=1775777188&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/knowledge-coaster-4-pk"
+    },
+    {
+      "name": "Vigilance Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/vigilance-default-hat-1.jpg?v=1776363402&width=900",
+      "imageAlt": "Vigilance Hat - The Great PNW",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/vigilance-hat"
+    },
+    {
+      "name": "Protect Trucker Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/protect-trucker-hat.jpg?v=1776363422&width=900",
+      "imageAlt": "Protect Trucker Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/corduroyhatfront.jpg?v=1776363422&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/protect-trucker-hat"
+    },
+    {
+      "name": "Smokey Bear Bandana",
+      "price": "$14.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/smokeybear_bandana_default.jpg?v=1776111889&width=900",
+      "imageAlt": "Smokey Bear Bandana - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/BANDANALIFESTYLE.jpg?v=1776111889&width=900",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw/products/smokey-bear-bandana"
+    }
+  ],
+  "bodyText": [
+    "You're $ 99.00 away from free shipping.",
+    "Get notified of sales, limited edition releases, and get 20% off your first order",
+    "GET 20% OFF YOUR FIRST ORDER",
+    "And be first to be notified on upcoming sales and new releases!"
+  ],
+  "sectionOrder": [
+    "header",
+    "hero",
+    "products",
+    "content",
+    "features",
+    "content",
+    "footer"
+  ],
+  "scrapedAt": "2026-06-27T06:39:18.099Z"
+}

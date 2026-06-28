@@ -1,0 +1,482 @@
+{
+  "announcement": {
+    "text": "FREE SHIPPING ON ORDERS OVER $99 icon-X \"Close\"",
+    "bg": "rgb(40, 88, 117)",
+    "color": "rgb(255, 255, 255)"
+  },
+  "logo": {
+    "src": "https://thegreatpnw.com/cdn/shop/files/PNW_Long_Logo.svg?v=1775164631&width=180",
+    "alt": "image",
+    "width": 300,
+    "height": 63
+  },
+  "navTree": [
+    {
+      "label": "Apparel",
+      "href": "https://thegreatpnw.com/collections/all-apparel",
+      "childLinks": [
+        {
+          "text": "All",
+          "href": "https://thegreatpnw.com/collections/all-apparel"
+        },
+        {
+          "text": "Tees",
+          "href": "https://thegreatpnw.com/collections/mens-tees"
+        },
+        {
+          "text": "Hats",
+          "href": "https://thegreatpnw.com/collections/headwear"
+        },
+        {
+          "text": "Bottoms",
+          "href": "https://thegreatpnw.com/collections/bottoms"
+        },
+        {
+          "text": "Fleece",
+          "href": "https://thegreatpnw.com/collections/fleece-2"
+        },
+        {
+          "text": "Flannels",
+          "href": "https://thegreatpnw.com/collections/flannels"
+        },
+        {
+          "text": "Button Ups",
+          "href": "https://thegreatpnw.com/collections/button-ups"
+        },
+        {
+          "text": "Outerwear",
+          "href": "https://thegreatpnw.com/collections/outerwear"
+        },
+        {
+          "text": "Accessories",
+          "href": "https://thegreatpnw.com/collections/accessories-2"
+        },
+        {
+          "text": "All",
+          "href": "https://thegreatpnw.com/collections/accessories-2"
+        },
+        {
+          "text": "Bags",
+          "href": "https://thegreatpnw.com/collections/bags"
+        },
+        {
+          "text": "Socks",
+          "href": "https://thegreatpnw.com/collections/socks"
+        },
+        {
+          "text": "Stickers & Decals",
+          "href": "https://thegreatpnw.com/collections/stickers"
+        },
+        {
+          "text": "Drinkware",
+          "href": "https://thegreatpnw.com/collections/drinkware"
+        },
+        {
+          "text": "Posters",
+          "href": "https://thegreatpnw.com/collections/posters"
+        },
+        {
+          "text": "Featured",
+          "href": "https://thegreatpnw.com/collections/smokey-bear-pnw#"
+        },
+        {
+          "text": "Apex Tee",
+          "href": "https://thegreatpnw.com/products/apex-tee-1"
+        },
+        {
+          "text": "Pants & Shorts",
+          "href": "https://thegreatpnw.com/collections/bottoms"
+        },
+        {
+          "text": "Smokey Bear Collection",
+          "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+        },
+        {
+          "text": "Essentials",
+          "href": "https://thegreatpnw.com/collections/essentials"
+        },
+        {
+          "text": "SALE",
+          "href": "https://thegreatpnw.com/collections/sale"
+        },
+        {
+          "text": "Rainier X The Great PNW",
+          "href": "https://thegreatpnw.com/collections/rainier-26"
+        },
+        {
+          "text": "Hatchet Shorts",
+          "href": "https://thegreatpnw.com/collections/bottoms"
+        }
+      ],
+      "groups": [
+        {
+          "heading": "Apparel",
+          "links": [
+            {
+              "text": "Apparel",
+              "href": "https://thegreatpnw.com/collections/all-apparel"
+            },
+            {
+              "text": "All",
+              "href": "https://thegreatpnw.com/collections/all-apparel"
+            },
+            {
+              "text": "Tees",
+              "href": "https://thegreatpnw.com/collections/mens-tees"
+            },
+            {
+              "text": "Hats",
+              "href": "https://thegreatpnw.com/collections/headwear"
+            },
+            {
+              "text": "Bottoms",
+              "href": "https://thegreatpnw.com/collections/bottoms"
+            },
+            {
+              "text": "Fleece",
+              "href": "https://thegreatpnw.com/collections/fleece-2"
+            },
+            {
+              "text": "Flannels",
+              "href": "https://thegreatpnw.com/collections/flannels"
+            },
+            {
+              "text": "Button Ups",
+              "href": "https://thegreatpnw.com/collections/button-ups"
+            },
+            {
+              "text": "Outerwear",
+              "href": "https://thegreatpnw.com/collections/outerwear"
+            },
+            {
+              "text": "Accessories",
+              "href": "https://thegreatpnw.com/collections/accessories-2"
+            },
+            {
+              "text": "All",
+              "href": "https://thegreatpnw.com/collections/accessories-2"
+            },
+            {
+              "text": "Bags",
+              "href": "https://thegreatpnw.com/collections/bags"
+            },
+            {
+              "text": "Socks",
+              "href": "https://thegreatpnw.com/collections/socks"
+            },
+            {
+              "text": "Stickers & Decals",
+              "href": "https://thegreatpnw.com/collections/stickers"
+            },
+            {
+              "text": "Drinkware",
+              "href": "https://thegreatpnw.com/collections/drinkware"
+            },
+            {
+              "text": "Posters",
+              "href": "https://thegreatpnw.com/collections/posters"
+            },
+            {
+              "text": "Featured",
+              "href": "https://thegreatpnw.com/collections/smokey-bear-pnw#"
+            },
+            {
+              "text": "Apex Tee",
+              "href": "https://thegreatpnw.com/products/apex-tee-1"
+            },
+            {
+              "text": "Pants & Shorts",
+              "href": "https://thegreatpnw.com/collections/bottoms"
+            },
+            {
+              "text": "Smokey Bear Collection",
+              "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+            },
+            {
+              "text": "Essentials",
+              "href": "https://thegreatpnw.com/collections/essentials"
+            },
+            {
+              "text": "SALE",
+              "href": "https://thegreatpnw.com/collections/sale"
+            }
+          ]
+        },
+        {
+          "heading": "Apparel",
+          "links": [
+            {
+              "text": "Apparel",
+              "href": "https://thegreatpnw.com/collections/all-apparel"
+            },
+            {
+              "text": "All",
+              "href": "https://thegreatpnw.com/collections/all-apparel"
+            },
+            {
+              "text": "Tees",
+              "href": "https://thegreatpnw.com/collections/mens-tees"
+            },
+            {
+              "text": "Hats",
+              "href": "https://thegreatpnw.com/collections/headwear"
+            },
+            {
+              "text": "Bottoms",
+              "href": "https://thegreatpnw.com/collections/bottoms"
+            },
+            {
+              "text": "Fleece",
+              "href": "https://thegreatpnw.com/collections/fleece-2"
+            },
+            {
+              "text": "Flannels",
+              "href": "https://thegreatpnw.com/collections/flannels"
+            },
+            {
+              "text": "Button Ups",
+              "href": "https://thegreatpnw.com/collections/button-ups"
+            },
+            {
+              "text": "Outerwear",
+              "href": "https://thegreatpnw.com/collections/outerwear"
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "links": [
+            {
+              "text": "Apparel",
+              "href": "https://thegreatpnw.com/collections/all-apparel"
+            }
+          ]
+        },
+        {
+          "heading": "Accessories",
+          "links": [
+            {
+              "text": "Accessories",
+              "href": "https://thegreatpnw.com/collections/accessories-2"
+            },
+            {
+              "text": "All",
+              "href": "https://thegreatpnw.com/collections/accessories-2"
+            },
+            {
+              "text": "Bags",
+              "href": "https://thegreatpnw.com/collections/bags"
+            },
+            {
+              "text": "Socks",
+              "href": "https://thegreatpnw.com/collections/socks"
+            },
+            {
+              "text": "Stickers & Decals",
+              "href": "https://thegreatpnw.com/collections/stickers"
+            },
+            {
+              "text": "Drinkware",
+              "href": "https://thegreatpnw.com/collections/drinkware"
+            },
+            {
+              "text": "Posters",
+              "href": "https://thegreatpnw.com/collections/posters"
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "links": [
+            {
+              "text": "Accessories",
+              "href": "https://thegreatpnw.com/collections/accessories-2"
+            }
+          ]
+        },
+        {
+          "heading": "Featured",
+          "links": [
+            {
+              "text": "Featured",
+              "href": "https://thegreatpnw.com/collections/smokey-bear-pnw#"
+            },
+            {
+              "text": "Apex Tee",
+              "href": "https://thegreatpnw.com/products/apex-tee-1"
+            },
+            {
+              "text": "Pants & Shorts",
+              "href": "https://thegreatpnw.com/collections/bottoms"
+            },
+            {
+              "text": "Smokey Bear Collection",
+              "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+            },
+            {
+              "text": "Essentials",
+              "href": "https://thegreatpnw.com/collections/essentials"
+            },
+            {
+              "text": "SALE",
+              "href": "https://thegreatpnw.com/collections/sale"
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "links": [
+            {
+              "text": "Featured",
+              "href": "https://thegreatpnw.com/collections/smokey-bear-pnw#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Rainier X The Great PNW",
+      "href": "https://thegreatpnw.com/collections/rainier-26",
+      "childLinks": [
+        {
+          "text": "Best Sellers",
+          "href": "https://thegreatpnw.com/collections/core-collection"
+        },
+        {
+          "text": "Smokey Bear",
+          "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+        },
+        {
+          "text": "Upper Left, USA™",
+          "href": "https://thegreatpnw.com/collections/upperleftusa"
+        },
+        {
+          "text": "Woodsy",
+          "href": "https://thegreatpnw.com/collections/woodsy"
+        },
+        {
+          "text": "Essentials",
+          "href": "https://thegreatpnw.com/collections/essentials"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "label": "Meet The Team",
+      "href": "https://thegreatpnw.com/pages/team",
+      "childLinks": [
+        {
+          "text": "Our Story",
+          "href": "https://thegreatpnw.com/pages/our-story"
+        },
+        {
+          "text": "Behind The Brand",
+          "href": "https://thegreatpnw.com/pages/behind-the-brand"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "label": "Learn More",
+      "href": "https://thegreatpnw.com/pages/upper-left-club",
+      "childLinks": [],
+      "groups": []
+    }
+  ],
+  "footerCols": [
+    {
+      "heading": "CUSTOMER SERVICE",
+      "links": [
+        {
+          "text": "Contact Us",
+          "href": "https://thegreatpnw.com/pages/contact"
+        },
+        {
+          "text": "Returns & Exchanges",
+          "href": "https://thegreatpnw.com/apps/redo/returns-portal/login?referralId=69763f8dc9fd22fc1391f674"
+        },
+        {
+          "text": "FAQ",
+          "href": "https://thegreatpnw.com/pages/faq"
+        },
+        {
+          "text": "Manage Subscription",
+          "href": "https://thegreatpnw.com/pages/manage-subscriptions"
+        }
+      ]
+    }
+  ],
+  "social": [
+    {
+      "network": "instagram",
+      "href": "https://www.instagram.com/thegreat_pnw/"
+    },
+    {
+      "network": "facebook",
+      "href": "https://www.facebook.com/TheGreatPNWapparel/"
+    },
+    {
+      "network": "youtube",
+      "href": "https://www.youtube.com/@thegreat_pnw"
+    }
+  ],
+  "newsletter": {
+    "heading": "Sign up & save",
+    "placeholder": "Enter your email"
+  },
+  "styling": {
+    "bodyFont": "Helvetica, Arial, sans-serif",
+    "headingFont": "Helvetica",
+    "bodyColor": "rgb(0, 0, 0)",
+    "bodyBg": "rgb(255, 255, 255)",
+    "headerBg": "rgb(7, 57, 81)",
+    "headerColor": "rgb(0, 0, 0)",
+    "footerBg": "rgb(28, 29, 29)",
+    "footerColor": "rgb(255, 255, 255)",
+    "btn": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "font": "Helvetica, Arial, sans-serif",
+      "weight": "400",
+      "transform": "none",
+      "letterSpacing": "normal",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "productTitle": {
+      "size": "14.4px",
+      "weight": "700",
+      "transform": "uppercase"
+    }
+  },
+  "fontFiles": [
+    {
+      "family": "\"Fjalla One\"",
+      "src": "local(\"Fjalla One\"), url(\"https://cdn.shopify.com/s/files/1/0938/3060/files/fjalla_one_631270fc-fba9-4eb7-9f28-7c4b46a30ff9.woff2?v=1733062990\")"
+    },
+    {
+      "family": "\"Fjalla One\"",
+      "src": "local(\"Fjalla One\"), url(\"https://cdn.shopify.com/s/files/1/0938/3060/files/fjalla_one_631270fc-fba9-4eb7-9f28-7c4b46a30ff9.woff2?v=1733062990\")"
+    },
+    {
+      "family": "\"Fjalla One\"",
+      "src": "local(\"Fjalla One\"), url(\"https://cdn.shopify.com/s/files/1/0938/3060/files/fjalla_one_631270fc-fba9-4eb7-9f28-7c4b46a30ff9.woff2?v=1733062990\")"
+    },
+    {
+      "family": "Poppins-Klaviyo-Hosted",
+      "src": "url(\"https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_italic_400.woff2\")"
+    },
+    {
+      "family": "Poppins-Klaviyo-Hosted",
+      "src": "url(\"https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_italic_700.woff2\")"
+    },
+    {
+      "family": "Poppins-Klaviyo-Hosted",
+      "src": "url(\"https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_regular_400_2.woff2\")"
+    },
+    {
+      "family": "Poppins-Klaviyo-Hosted",
+      "src": "url(\"https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_regular_700.woff2\")"
+    }
+  ]
+}

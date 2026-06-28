@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{TEAL}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:image" content="{{HERO_IMAGE_SRC}}">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+
+  <link rel="preload" as="image" href="{{HERO_IMAGE_SRC}}" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="./assets/{{DISPLAY_FONT_FILE}}" crossorigin>
+
+  <style>
+    @font-face {
+      font-family: "{{DISPLAY_FONT}}";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("./assets/{{DISPLAY_FONT_FILE}}") format("woff2");
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --teal: {{TEAL}};
+      --footer: {{FOOTER_COLOR}};
+      --body-bg: {{BODY_COLOR}};
+      --text: {{TEXT_COLOR}};
+      --accent: {{ACCENT_COLOR}};
+      --muted: #5a5a5a;
+      --line: #e3e3e3;
+      --maxw: 1280px;
+      --display: "{{DISPLAY_FONT}}", "Arial Narrow", Helvetica, Arial, sans-serif;
+      --sans: Helvetica, Arial, "Helvetica Neue", sans-serif;
+    }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--body-bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: .01em; }
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 18px; }
+    :focus-visible { outline: 3px solid #ffb703; outline-offset: 2px; }
+
+    .skip-link { position: absolute; left: -999px; top: 0; background: var(--teal); color: #fff; padding: 12px 18px; z-index: 1000; }
+    .skip-link:focus { left: 0; }
+
+    /* Announcement */
+    .announce { background: var(--teal); color: #fff; text-align: center; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; padding: 9px 12px; font-weight: 700; }
+
+    /* Header */
+    .header { background: var(--teal); color: #fff; }
+    .header__bar { display: flex; align-items: center; gap: 18px; min-height: 70px; }
+    .header__logo { display: inline-flex; align-items: center; padding: 8px 0; }
+    .header__logo svg { width: 190px; height: auto; }
+    .header__logo .logo-fallback { color: #fff; font-family: var(--display); font-size: 1.4rem; }
+    .header__spacer { flex: 1; }
+
+    .mainnav { display: none; }
+    .mainnav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+    .nav__item { position: relative; }
+    .nav__link { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; color: #fff; font-weight: 700; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; }
+    .nav__item--has-menu > .nav__link::after { content: "▾"; margin-left: 6px; font-size: .7em; opacity: .8; }
+    .mega { position: absolute; top: 100%; left: 0; background: #fff; color: var(--text); min-width: 240px; padding: 18px 22px; box-shadow: 0 14px 30px rgba(0,0,0,.18); display: none; gap: 28px; z-index: 50; border-top: 3px solid var(--teal); }
+    .nav__item--has-menu:hover .mega, .nav__item--has-menu:focus-within .mega { display: flex; }
+    .mega__heading { font-family: var(--display); font-size: .95rem; text-transform: uppercase; margin: 0 0 8px; color: var(--teal); }
+    .mega__list { list-style: none; margin: 0; padding: 0; }
+    .mega__list a { display: block; padding: 7px 0; font-size: .9rem; min-height: 34px; }
+    .mega__list a:hover { text-decoration: underline; }
+
+    .icons { display: flex; align-items: center; gap: 2px; }
+    .icons a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; color: #fff; }
+
+    /* Mobile menu (details, no JS) */
+    .mnav { }
+    .mnav > summary { list-style: none; display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; color: #fff; cursor: pointer; font-size: 1.5rem; }
+    .mnav > summary::-webkit-details-marker { display: none; }
+    .mnav__panel { position: absolute; left: 0; right: 0; background: #fff; color: var(--text); box-shadow: 0 14px 30px rgba(0,0,0,.2); z-index: 60; padding: 8px 0; }
+    .mnav__panel a { display: block; padding: 13px 20px; min-height: 44px; font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; border-bottom: 1px solid var(--line); }
+
+    /* Category strip */
+    .catstrip { border-bottom: 1px solid var(--line); background: #fff; }
+    .catstrip__inner { display: flex; gap: 6px; overflow-x: auto; padding: 10px 18px; max-width: var(--maxw); margin: 0 auto; -webkit-overflow-scrolling: touch; }
+    .cat-pill { flex: 0 0 auto; padding: 9px 16px; min-height: 40px; display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--text); white-space: nowrap; }
+    .cat-pill:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    /* Hero */
+    .hero img { width: 100%; height: auto; }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+    /* Collection section */
+    .collection { padding: 40px 0 10px; }
+    .collection__title { font-size: clamp(1.8rem, 5vw, 2.8rem); text-transform: uppercase; text-align: center; margin: 0 0 6px; }
+    .collection__sub { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 30px; }
+
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; list-style: none; margin: 0; padding: 26px 0 50px; }
+    .card { background: #fff; }
+    .card__link { display: flex; flex-direction: column; height: 100%; }
+    .card__media { display: block; aspect-ratio: 1/1; background: #f4f4f2; overflow: hidden; position: relative; }
+    .card__media img { width: 100%; height: 100%; object-fit: cover; }
+    /* Hover image swap (front -> alt view) */
+    .card__media--dual .card__img--hover { position: absolute; inset: 0; opacity: 0; transition: opacity .35s ease; }
+    .card__media--dual .card__img--primary { transition: opacity .35s ease; }
+    @media (hover: hover) {
+      .card__link:hover .card__media--dual .card__img--hover,
+      .card__link:focus-visible .card__media--dual .card__img--hover { opacity: 1; }
+      .card__link:hover .card__media--dual .card__img--primary,
+      .card__link:focus-visible .card__media--dual .card__img--primary { opacity: 0; }
+      .card__media--dual { transform: none; }
+      .card__link:hover .card__media--dual img { transform: scale(1.03); }
+    }
+    .card__media--dual img { transition: opacity .35s ease, transform .5s ease; }
+    .card__info { padding: 12px 6px 4px; display: flex; flex-direction: column; gap: 4px; }
+    .card__name { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; line-height: 1.3; }
+    .card__price { font-size: .85rem; color: var(--muted); }
+
+    /* Newsletter band */
+    .promo { background: var(--teal); color: #fff; text-align: center; padding: 56px 18px; }
+    .promo h2 { font-size: clamp(1.8rem, 6vw, 3rem); text-transform: uppercase; margin: 0 0 10px; }
+    .promo p { margin: 0 auto 22px; max-width: 520px; color: #dce8ed; }
+    .signup { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+    .signup input { flex: 1; min-width: 220px; min-height: 48px; padding: 12px 16px; border: 2px solid #fff; border-radius: 4px; font-size: 1rem; background: #fff; color: #111; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 30px; background: #fff; color: var(--teal); font-weight: 800; text-transform: uppercase; letter-spacing: .05em; border: 2px solid #fff; border-radius: 4px; cursor: pointer; font-size: .95rem; font-family: var(--sans); }
+    .btn:hover { background: transparent; color: #fff; }
+    .signup__ok { width: 100%; margin-top: 12px; font-weight: 700; }
+
+    /* Footer */
+    .footer { background: var(--footer); color: #fff; padding: 50px 0 30px; }
+    .footer__grid { display: grid; grid-template-columns: 1fr; gap: 34px; }
+    .foot__heading, .foot__signup h2 { font-family: var(--display); font-size: 1.1rem; text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px; }
+    .foot__list { list-style: none; margin: 0; padding: 0; }
+    .foot__list a { display: inline-flex; align-items: center; min-height: 40px; color: #cfd3d4; font-size: .9rem; }
+    .foot__list a:hover { color: #fff; text-decoration: underline; }
+    .foot__signup p { color: #cfd3d4; font-size: .9rem; margin: 0 0 14px; max-width: 320px; }
+    .foot__signup .signup input { border-color: #444; }
+    .foot__signup .btn { background: var(--teal); color: #fff; border-color: var(--teal); }
+    .foot__signup .btn:hover { background: #0a4a6a; }
+    .socials { display: flex; gap: 10px; margin-top: 18px; }
+    .social { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; }
+    .social:hover { background: var(--teal); border-color: var(--teal); }
+    .footer__legal { border-top: 1px solid #333; margin-top: 36px; padding-top: 22px; color: #9aa0a1; font-size: .82rem; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; }
+      .header__logo svg { width: 220px; }
+    }
+    @media (min-width: 1000px) {
+      .mainnav { display: block; }
+      .mnav { display: none; }
+      .grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="announce">{{ANNOUNCEMENT}}</div>
+
+  <header class="header">
+    <div class="wrap header__bar">
+      <details class="mnav">
+        <summary aria-label="Open menu" role="button">☰</summary>
+        <div class="mnav__panel">
+          {{MOBILE_NAV}}
+        </div>
+      </details>
+
+      <a class="header__logo" href="{{CANONICAL_URL}}" aria-label="{{LOGO_ALT}}">
+        {{LOGO_SVG}}
+      </a>
+
+      <nav class="mainnav" aria-label="Primary">
+        <ul>
+        {{NAV}}
+        </ul>
+      </nav>
+
+      <div class="header__spacer"></div>
+
+      <div class="icons">
+        <a href="{{BASE_URL}}/search" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </a>
+        <a href="{{BASE_URL}}/account" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        </a>
+        <a href="{{BASE_URL}}/cart" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6 5 2H2"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="catstrip" aria-label="Shop categories">
+    <div class="catstrip__inner">
+      {{CATEGORY_STRIP}}
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" aria-label="{{COLLECTION_NAME}} collection banner">
+      <h1 class="visually-hidden">{{H1_TEXT}}</h1>
+      <img src="{{HERO_IMAGE_SRC}}" alt="{{HERO_IMAGE_ALT}}" width="{{HERO_IMAGE_WIDTH}}" height="{{HERO_IMAGE_HEIGHT}}" fetchpriority="high" decoding="async">
+    </section>
+
+    <section class="collection wrap" aria-labelledby="coll-title">
+      <h2 class="collection__title" id="coll-title">{{COLLECTION_NAME}}</h2>
+      <p class="collection__sub">{{SUBHEADLINE_TEXT}}</p>
+      <ul class="grid">
+          {{PRODUCT_GRID}}
+      </ul>
+    </section>
+
+    <section class="promo" aria-labelledby="promo-title">
+      <h2 id="promo-title">{{NEWSLETTER_BANNER_HEADING}}</h2>
+      <p>{{NEWSLETTER_BLURB}}</p>
+      <form class="signup" data-klaviyo-signup aria-label="Email signup">
+        <label class="visually-hidden" for="promo-email">Email address</label>
+        <input id="promo-email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+        <button class="btn" type="submit">Sign Up</button>
+        <p class="signup__ok" data-signup-success hidden>Thanks — check your inbox for your discount!</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="foot__signup">
+        <h2>{{NEWSLETTER_HEADING}}</h2>
+        <p>{{NEWSLETTER_BLURB}}</p>
+        <form class="signup" data-klaviyo-signup aria-label="Email signup">
+          <label class="visually-hidden" for="foot-email">Email address</label>
+          <input id="foot-email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+          <button class="btn" type="submit">Subscribe</button>
+          <p class="signup__ok" data-signup-success hidden>Thanks for subscribing!</p>
+        </form>
+        <div class="socials">
+        {{SOCIAL}}
+        </div>
+      </div>
+      {{FOOTER_COLUMNS}}
+    </div>
+    <div class="wrap footer__legal">
+      <span>&copy; {{YEAR}} {{COPYRIGHT}}. All rights reserved.</span>
+      <span>Rebuilt for performance by Strategy Labs.</span>
+    </div>
+  </footer>
+
+  {{TRACKING}}
+</body>
+</html>

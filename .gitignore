@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Generated build artifacts (regenerate with: node tools/build.js <slug>)
+output/*/assets/
+output/*/.publish/
+output/*/index.html
+output/*/lighthouse.json
+output/*/*.png
+
+# Local Netlify folder
+.netlify
+
+# Logs / OS cruft
+*.log
+.DS_Store
+
+# Never commit secrets
+.env
+.env.*
+*.token
+.netlify-token

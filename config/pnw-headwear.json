@@ -1,0 +1,130 @@
+{
+  "brand": {
+    "name": "The Great PNW",
+    "logoFile": "logo.svg",
+    "baseUrl": "https://thegreatpnw.com",
+    "colors": {
+      "teal": "#073951",
+      "footer": "#1c1d1d",
+      "body": "#ffffff",
+      "text": "#111111",
+      "accent": "#073951"
+    },
+    "displayFont": "Fjalla One",
+    "displayFontFile": "fjalla-one.woff2"
+  },
+  "announcement": "FREE SHIPPING ON ORDERS OVER $99",
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "https://thegreatpnw.com/collections/all-apparel",
+      "groups": [
+        {
+          "heading": "Apparel",
+          "links": [
+            { "text": "Tees", "href": "https://thegreatpnw.com/collections/mens-tees" },
+            { "text": "Hats", "href": "https://thegreatpnw.com/collections/headwear" },
+            { "text": "Bottoms", "href": "https://thegreatpnw.com/collections/bottoms" },
+            { "text": "Fleece", "href": "https://thegreatpnw.com/collections/fleece-2" },
+            { "text": "Flannels", "href": "https://thegreatpnw.com/collections/flannels" },
+            { "text": "Button Ups", "href": "https://thegreatpnw.com/collections/button-ups" },
+            { "text": "Outerwear", "href": "https://thegreatpnw.com/collections/outerwear" }
+          ]
+        },
+        {
+          "heading": "Accessories",
+          "links": [
+            { "text": "Bags", "href": "https://thegreatpnw.com/collections/bags" },
+            { "text": "Socks", "href": "https://thegreatpnw.com/collections/socks" },
+            { "text": "Stickers & Decals", "href": "https://thegreatpnw.com/collections/stickers" },
+            { "text": "Drinkware", "href": "https://thegreatpnw.com/collections/drinkware" },
+            { "text": "Posters", "href": "https://thegreatpnw.com/collections/posters" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Shop by Collection",
+      "href": "https://thegreatpnw.com/collections",
+      "groups": [
+        {
+          "heading": "Featured",
+          "links": [
+            { "text": "Smokey Bear", "href": "https://thegreatpnw.com/collections/smokey-bear-pnw" },
+            { "text": "Rainier X The Great PNW", "href": "https://thegreatpnw.com/collections/rainier-26" },
+            { "text": "Best Sellers", "href": "https://thegreatpnw.com/collections/core-collection" },
+            { "text": "Upper Left, USA™", "href": "https://thegreatpnw.com/collections/upperleftusa" },
+            { "text": "Woodsy", "href": "https://thegreatpnw.com/collections/woodsy" },
+            { "text": "Essentials", "href": "https://thegreatpnw.com/collections/essentials" },
+            { "text": "Sale", "href": "https://thegreatpnw.com/collections/sale" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "About Us",
+      "href": "https://thegreatpnw.com/pages/our-story",
+      "groups": [
+        {
+          "heading": "About",
+          "links": [
+            { "text": "Our Story", "href": "https://thegreatpnw.com/pages/our-story" },
+            { "text": "Meet The Team", "href": "https://thegreatpnw.com/pages/team" },
+            { "text": "Behind The Brand", "href": "https://thegreatpnw.com/pages/behind-the-brand" }
+          ]
+        }
+      ]
+    },
+    { "label": "Upper Left Club", "href": "https://thegreatpnw.com/pages/upper-left-club", "groups": [] }
+  ],
+  "categoryStrip": [
+    { "text": "Smokey Bear", "href": "https://thegreatpnw.com/collections/smokey-bear-pnw" },
+    { "text": "Tees", "href": "https://thegreatpnw.com/collections/mens-tees" },
+    { "text": "Hats", "href": "https://thegreatpnw.com/collections/headwear" },
+    { "text": "Button Ups", "href": "https://thegreatpnw.com/collections/button-ups" },
+    { "text": "Bottoms", "href": "https://thegreatpnw.com/collections/bottoms" },
+    { "text": "Fleece", "href": "https://thegreatpnw.com/collections/fleece-2" },
+    { "text": "Flannels", "href": "https://thegreatpnw.com/collections/flannels" },
+    { "text": "Bags", "href": "https://thegreatpnw.com/collections/bags" },
+    { "text": "Socks", "href": "https://thegreatpnw.com/collections/socks" },
+    { "text": "Drinkware", "href": "https://thegreatpnw.com/collections/drinkware" }
+  ],
+  "footer": {
+    "columns": [
+      {
+        "heading": "More Info",
+        "links": [
+          { "text": "About Us", "href": "https://thegreatpnw.com/pages/our-story" },
+          { "text": "Free Wallpapers", "href": "https://thegreatpnw.com/pages/wallpaper-wednesday" },
+          { "text": "Store Locator", "href": "https://thegreatpnw.com/pages/store-mapper" }
+        ]
+      },
+      {
+        "heading": "Customer Service",
+        "links": [
+          { "text": "Contact Us", "href": "https://thegreatpnw.com/pages/contact" },
+          { "text": "Returns & Exchanges", "href": "https://thegreatpnw.com/pages/returns" },
+          { "text": "FAQ", "href": "https://thegreatpnw.com/pages/faq" },
+          { "text": "Manage Subscription", "href": "https://thegreatpnw.com/pages/manage-subscriptions" }
+        ]
+      }
+    ],
+    "social": [
+      { "network": "instagram", "href": "https://www.instagram.com/thegreat_pnw/" },
+      { "network": "facebook", "href": "https://www.facebook.com/TheGreatPNWapparel/" },
+      { "network": "youtube", "href": "https://www.youtube.com/@thegreat_pnw" }
+    ],
+    "copyright": "The Great PNW"
+  },
+  "newsletter": {
+    "heading": "Sign Up & Save",
+    "blurb": "Be the first to know about new releases, sales, and Upper Left Club drops — plus 20% off your first order.",
+    "bannerHeading": "Get 20% Off Your First Order"
+  },
+  "tracking": {
+    "metaPixelId": "973636306036006",
+    "ga4Id": "G-3EJ2E7P52W",
+    "googleAdsId": "AW-835951824",
+    "klaviyoCompanyId": "LKmnDZ"
+  }
+}

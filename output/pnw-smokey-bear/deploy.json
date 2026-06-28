@@ -1,0 +1,12 @@
+{
+  "url": "https://sl-pnw-smokey-bear.netlify.app",
+  "deployedAt": "2026-06-27T06:40:17.286Z",
+  "lighthouseScores": {
+    "performance": 92,
+    "accessibility": 100,
+    "best-practices": 96,
+    "seo": 100
+  },
+  "siteName": "sl-pnw-smokey-bear",
+  "siteId": "b945c68e-ec0d-4967-8f06-ca4e857d6ad9"
+}

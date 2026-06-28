@@ -1,0 +1,1056 @@
+{
+  "url": "https://thegreatpnw.com/collections/headwear",
+  "slug": "pnw-headwear",
+  "pageTitle": "Hats – The Great PNW",
+  "metaDescription": "Billed hats and beanies to round out your PNW wardrobe.",
+  "h1": [
+    "Hats"
+  ],
+  "h1Derived": false,
+  "h2": [
+    "Shop by collection",
+    "Sign up & save",
+    "More Info",
+    "CUSTOMER SERVICE"
+  ],
+  "h3": [
+    "Rainier X The Great PNW",
+    "Best Sellers",
+    "Smokey Bear",
+    "Hats",
+    "Tees",
+    "Fleece & Flannels",
+    "Upper Left, USA™",
+    "Woodsy",
+    "Outerwear",
+    "Bags",
+    "Drinkware"
+  ],
+  "heroImage": {
+    "src": "https://thegreatpnw.com/cdn/shop/files/Headwear_D.jpg?v=1716350679&width=1920",
+    "alt": "image"
+  },
+  "allImages": [
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-collection-image.jpg?v=1778819889&width=900",
+      "alt": "image",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Hatchet_Short_Label.webp?v=1780602902&width=900",
+      "alt": "image",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/shipping_truck_image.webp?v=1773400090",
+      "alt": "image",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_Long_Logo.svg?v=1775164631&width=180",
+      "alt": "image",
+      "width": 300,
+      "height": 63
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW_Long_Logo.svg?v=1775164631&width=200",
+      "alt": "image",
+      "width": 300,
+      "height": 63
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/R_rotate_2.gif?v=1748012018&width=100",
+      "alt": "image",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Smokey_Bear.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Sales.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Headwear.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Tees.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Pants.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Button_Up_-_Short_Sleeve.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Fleece_-_Hoodie.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Flannel.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Bags.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Socks.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Drinkware.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Icon_Nav_Icons_Teal_Club_-_ULC.svg?v=1775151344&width=100",
+      "alt": "image",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Headwear_D.jpg?v=1716350679&width=1920",
+      "alt": "image",
+      "width": 1280,
+      "height": 498
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/Headwear_M.jpg?v=1716350653&width=1200",
+      "alt": "image",
+      "width": 1024,
+      "height": 1366
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/northwoods-trucker-default.jpg?v=1782324420&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/serial-blue-default.jpg?v=1782315307&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/serial-tan-default.jpg?v=1782315308&width=360",
+      "alt": "Serial Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/surveyfeltdefault.jpg?v=1782315448&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/tackle-shop-hat-default.jpg?v=1782323672&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/tackleshop-default-angle-2.jpg?v=1782323673&width=360",
+      "alt": "Tackle Shop Trucker Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/cabintruckerdefault.jpg?v=1782315473&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/duck-default.jpg?v=1782315504&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-coop-26.webp?v=1781898110&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/camo-hat.jpg?v=1782427171&width=360",
+      "alt": "Co-Op Trucker Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-buck-fever-26.webp?v=1781898067&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/hat.jpg?v=1782490887&width=360",
+      "alt": "Buck Fever Trucker Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-collab-26_4d532518-2080-42eb-abd4-36ac83b31cc4.jpg?v=1781898034&width=360",
+      "alt": "image",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/patch-hat.jpg?v=1782427001&width=360",
+      "alt": "Rainier Collab Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-session-26.jpg?v=1778802163&width=360",
+      "alt": "Session Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/session_hat_rainier_2026_lifestyle_1.jpg?v=1778609327&width=360",
+      "alt": "Session Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-anthem-26.jpg?v=1778802163&width=360",
+      "alt": "Anthem Dad Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/222222.jpg?v=1778620751&width=360",
+      "alt": "Anthem Dad Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-cascade-26.jpg?v=1778802163&width=360",
+      "alt": "Cascade Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/cascade_hat_rainier_2026_lifestyle_1.jpg?v=1778609081&width=360",
+      "alt": "Cascade Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-brewmaster-26_320cf2dc-71a2-4c95-8b09-e9e5770e9e22.jpg?v=1778802163&width=360",
+      "alt": "Brewmaster Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/brewmaster-hat---1.jpg?v=1782427503&width=360",
+      "alt": "Brewmaster Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-varsity-26_ff78d004-750a-48fa-abc4-e8075075fcc6.jpg?v=1778802163&width=360",
+      "alt": "Varsity Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/varsity-hat.jpg?v=1782427470&width=360",
+      "alt": "Varsity Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-wrangle-26_30645194-32d8-4cdd-8423-cb7eacd6eea4.jpg?v=1778802163&width=360",
+      "alt": "Wrangle Trucker Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/wranglin-hat-lifess.jpg?v=1782479254&width=360",
+      "alt": "Wrangle Trucker Hat",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/crt-default.jpg?v=1778607207&width=360",
+      "alt": "Concrete Trucker Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/concrete-hat-2nd-angle.jpg?v=1776365017&width=360",
+      "alt": "Concrete Trucker Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/balance-hat-default-1.jpg?v=1776363156&width=360",
+      "alt": "Balance Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/balance-hat-2nd-angle.jpg?v=1776365032&width=360",
+      "alt": "Balance Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/sunnydays-default-1.jpg?v=1776363186&width=360",
+      "alt": "Sunny Days Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/sunny-days-2nd-angkle.jpg?v=1776365052&width=360",
+      "alt": "Sunny Days Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/tree-vibes-foam-trucker.jpg?v=1776366094&width=360",
+      "alt": "Tree Vibes Foam Trucker - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/tree-vibes-foam-trucker-2nd-angle.jpg?v=1776366108&width=360",
+      "alt": "Tree Vibes Foam Trucker - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/timberline-hat-default.jpg?v=1776363252&width=360",
+      "alt": "Timberline Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/timberlinehat_fall2025_lifestyle1_webimage.jpg?v=1776363252&width=360",
+      "alt": "Timberline Hat - The Great PNW",
+      "width": 341,
+      "height": 372
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/rainier-the-great-pnw-homepage-marquee-26-M.jpg?v=1779121984&width=600",
+      "alt": "Man in a retro garage wearing the official Rainier Beer x The Great PNW ringer tee and snapback trucker hat.",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/core_collection_image.jpg?v=1774479499&width=600",
+      "alt": "Best Sellers",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Smokey.jpg?v=1734553481&width=600",
+      "alt": "Smokey Bear",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Headwear.jpg?v=1759343868&width=600",
+      "alt": "Hats",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/tees.jpg?v=1759343539&width=600",
+      "alt": "Tees",
+      "width": 600,
+      "height": 655
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/SWEATSHIRTS_DESKTOP_600x_a5328843-ceae-4aa2-8671-c80611d108fa.webp?v=1716038516&width=600",
+      "alt": "Fleece & Flannels",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Miller_M.jpg?v=1716413033&width=600",
+      "alt": "Upper Left, USA™",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Woodsy.jpg?v=1716110710&width=600",
+      "alt": "Woodsy",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Outerwear_M-_1.jpg?v=1734554938&width=600",
+      "alt": "Outerwear",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Bags.jpg?v=1716352727&width=600",
+      "alt": "Bags",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/collections/Drinkware.jpg?v=1716101990&width=600",
+      "alt": "Drinkware",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "src": "https://thegreatpnw.com/cdn/shop/files/PNW-logo-full-white-email.png?v=1631723609&width=200",
+      "alt": "image",
+      "width": 200,
+      "height": 42
+    },
+    {
+      "src": "https://d3k81ch9hvuctc.cloudfront.net/company/LKmnDZ/images/0504cf61-091b-4b38-84b1-e3a0a8dedd0b.jpeg",
+      "alt": "The Great PNW Mustard Yellow Tee and mesh-back trucker hat styled with work gloves for a Pacific Northwest lifestyle",
+      "width": 985,
+      "height": 1074
+    }
+  ],
+  "ctaButtons": [
+    {
+      "text": "icon-X \"Close\"",
+      "href": ""
+    },
+    {
+      "text": "icon-X Close menu",
+      "href": ""
+    },
+    {
+      "text": "SHOP",
+      "href": ""
+    },
+    {
+      "text": "Apparel",
+      "href": ""
+    },
+    {
+      "text": "Accessories",
+      "href": ""
+    },
+    {
+      "text": "Featured",
+      "href": ""
+    },
+    {
+      "text": "SHOP BY COLLECTION",
+      "href": ""
+    },
+    {
+      "text": "ABOUT US",
+      "href": ""
+    },
+    {
+      "text": "UPPER LEFT CLUB",
+      "href": ""
+    },
+    {
+      "text": "icon-X Close cart",
+      "href": ""
+    },
+    {
+      "text": "Check out",
+      "href": ""
+    },
+    {
+      "text": "icon-hamburger Site navigation",
+      "href": ""
+    },
+    {
+      "text": "icon-cartCart",
+      "href": "https://thegreatpnw.com/cart"
+    },
+    {
+      "text": "Product type",
+      "href": ""
+    },
+    {
+      "text": "Availability",
+      "href": ""
+    },
+    {
+      "text": "Price",
+      "href": ""
+    },
+    {
+      "text": "icon-filter Filter",
+      "href": ""
+    },
+    {
+      "text": "Quick Shop",
+      "href": ""
+    },
+    {
+      "text": "icon-X \"Close (esc)\"",
+      "href": ""
+    },
+    {
+      "text": "SHOW 20 MORE",
+      "href": ""
+    },
+    {
+      "text": "Sign up & save",
+      "href": ""
+    },
+    {
+      "text": "icon-email Subscribe",
+      "href": ""
+    },
+    {
+      "text": "More Info",
+      "href": ""
+    },
+    {
+      "text": "CUSTOMER SERVICE",
+      "href": ""
+    },
+    {
+      "text": "icon-chevron-left",
+      "href": ""
+    },
+    {
+      "text": "icon-X",
+      "href": ""
+    },
+    {
+      "text": "icon-chevron",
+      "href": ""
+    },
+    {
+      "text": "Enable accessibility",
+      "href": ""
+    },
+    {
+      "text": "Close icon Close accessibility",
+      "href": ""
+    },
+    {
+      "text": "Reset All Checked mark Statement",
+      "href": ""
+    },
+    {
+      "text": "Reset All",
+      "href": ""
+    },
+    {
+      "text": "Checked mark Statement",
+      "href": ""
+    },
+    {
+      "text": "Adjust font size Checked mark Font Size",
+      "href": ""
+    },
+    {
+      "text": "Screen Reader Checked mark Screen Reader",
+      "href": ""
+    },
+    {
+      "text": "Highlight Links Checked mark Highlight Links",
+      "href": ""
+    },
+    {
+      "text": "Change Cursor Checked mark Cursor",
+      "href": ""
+    },
+    {
+      "text": "Line Height Checked mark Line Height",
+      "href": ""
+    },
+    {
+      "text": "Letter Spacing Checked mark Letter Spacing",
+      "href": ""
+    },
+    {
+      "text": "Stop Animations Checked mark Stop Animation",
+      "href": ""
+    },
+    {
+      "text": "Mute sounds Checked mark Mute Sounds",
+      "href": ""
+    },
+    {
+      "text": "Hide Image Checked mark Hide Images",
+      "href": ""
+    },
+    {
+      "text": "Change text color to red",
+      "href": ""
+    },
+    {
+      "text": "Change text color to blue",
+      "href": ""
+    },
+    {
+      "text": "Change text color to green",
+      "href": ""
+    },
+    {
+      "text": "Change text color to purple",
+      "href": ""
+    },
+    {
+      "text": "Change text color to orange",
+      "href": ""
+    },
+    {
+      "text": "Change text color to teal",
+      "href": ""
+    },
+    {
+      "text": "Change text color to black",
+      "href": ""
+    },
+    {
+      "text": "Change text color to white",
+      "href": ""
+    },
+    {
+      "text": "Reset",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to red",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to blue",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to green",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to purple",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to orange",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to teal",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to black",
+      "href": ""
+    },
+    {
+      "text": "Change heading color to white",
+      "href": ""
+    },
+    {
+      "text": "Change background color to red",
+      "href": ""
+    },
+    {
+      "text": "Change background color to blue",
+      "href": ""
+    },
+    {
+      "text": "Change background color to green",
+      "href": ""
+    },
+    {
+      "text": "Change background color to purple",
+      "href": ""
+    },
+    {
+      "text": "Change background color to orange",
+      "href": ""
+    },
+    {
+      "text": "Change background color to teal",
+      "href": ""
+    },
+    {
+      "text": "Change background color to black",
+      "href": ""
+    },
+    {
+      "text": "Change background color to white",
+      "href": ""
+    },
+    {
+      "text": "Close dialog",
+      "href": ""
+    },
+    {
+      "text": "CONTINUE",
+      "href": ""
+    },
+    {
+      "text": "Submit",
+      "href": ""
+    }
+  ],
+  "navLinks": [
+    {
+      "text": "Apparel",
+      "href": "https://thegreatpnw.com/collections/all-apparel"
+    },
+    {
+      "text": "All",
+      "href": "https://thegreatpnw.com/collections/all-apparel"
+    },
+    {
+      "text": "Tees",
+      "href": "https://thegreatpnw.com/collections/mens-tees"
+    },
+    {
+      "text": "Hats",
+      "href": "https://thegreatpnw.com/collections/headwear"
+    },
+    {
+      "text": "Bottoms",
+      "href": "https://thegreatpnw.com/collections/bottoms"
+    },
+    {
+      "text": "Fleece",
+      "href": "https://thegreatpnw.com/collections/fleece-2"
+    },
+    {
+      "text": "Flannels",
+      "href": "https://thegreatpnw.com/collections/flannels"
+    },
+    {
+      "text": "Button Ups",
+      "href": "https://thegreatpnw.com/collections/button-ups"
+    },
+    {
+      "text": "Outerwear",
+      "href": "https://thegreatpnw.com/collections/outerwear"
+    },
+    {
+      "text": "Accessories",
+      "href": "https://thegreatpnw.com/collections/accessories-2"
+    },
+    {
+      "text": "All",
+      "href": "https://thegreatpnw.com/collections/accessories-2"
+    },
+    {
+      "text": "Bags",
+      "href": "https://thegreatpnw.com/collections/bags"
+    },
+    {
+      "text": "Socks",
+      "href": "https://thegreatpnw.com/collections/socks"
+    },
+    {
+      "text": "Stickers & Decals",
+      "href": "https://thegreatpnw.com/collections/stickers"
+    },
+    {
+      "text": "Drinkware",
+      "href": "https://thegreatpnw.com/collections/drinkware"
+    },
+    {
+      "text": "Posters",
+      "href": "https://thegreatpnw.com/collections/posters"
+    },
+    {
+      "text": "Featured",
+      "href": "https://thegreatpnw.com/collections/headwear#"
+    },
+    {
+      "text": "Apex Tee",
+      "href": "https://thegreatpnw.com/products/apex-tee-1"
+    },
+    {
+      "text": "Pants & Shorts",
+      "href": "https://thegreatpnw.com/collections/bottoms"
+    },
+    {
+      "text": "Smokey Bear Collection",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+    },
+    {
+      "text": "Essentials",
+      "href": "https://thegreatpnw.com/collections/essentials"
+    },
+    {
+      "text": "SALE",
+      "href": "https://thegreatpnw.com/collections/sale"
+    },
+    {
+      "text": "Rainier X The Great PNW",
+      "href": "https://thegreatpnw.com/collections/rainier-26"
+    },
+    {
+      "text": "Hatchet Shorts",
+      "href": "https://thegreatpnw.com/collections/bottoms"
+    },
+    {
+      "text": "Best Sellers",
+      "href": "https://thegreatpnw.com/collections/core-collection"
+    },
+    {
+      "text": "Smokey Bear",
+      "href": "https://thegreatpnw.com/collections/smokey-bear-pnw"
+    },
+    {
+      "text": "Upper Left, USA™",
+      "href": "https://thegreatpnw.com/collections/upperleftusa"
+    },
+    {
+      "text": "Woodsy",
+      "href": "https://thegreatpnw.com/collections/woodsy"
+    },
+    {
+      "text": "Meet The Team",
+      "href": "https://thegreatpnw.com/pages/team"
+    },
+    {
+      "text": "Our Story",
+      "href": "https://thegreatpnw.com/pages/our-story"
+    },
+    {
+      "text": "Behind The Brand",
+      "href": "https://thegreatpnw.com/pages/behind-the-brand"
+    },
+    {
+      "text": "Learn More",
+      "href": "https://thegreatpnw.com/pages/upper-left-club"
+    },
+    {
+      "text": "account Log in",
+      "href": "https://thegreatpnw.com/account"
+    },
+    {
+      "text": "icon-search Search",
+      "href": "https://thegreatpnw.com/search"
+    },
+    {
+      "text": "icon-cartCart",
+      "href": "https://thegreatpnw.com/cart"
+    },
+    {
+      "text": "Rainier",
+      "href": "https://thegreatpnw.com/collections/rainier-26"
+    },
+    {
+      "text": "Club",
+      "href": "https://thegreatpnw.com/pages/upper-left-club"
+    }
+  ],
+  "collectionName": "Hats",
+  "productCards": [
+    {
+      "name": "Northwoods Trucker Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/northwoods-trucker-default.jpg?v=1782324420&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/headwear/products/northwoods-trucker-hat-copy"
+    },
+    {
+      "name": "Serial Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/serial-blue-default.jpg?v=1782315307&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/serial-tan-default.jpg?v=1782315308&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/serial-hat-2"
+    },
+    {
+      "name": "Survey Felt Patch Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/surveyfeltdefault.jpg?v=1782315448&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/headwear/products/survey-felt-patch-hat"
+    },
+    {
+      "name": "Tackle Shop Trucker Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/tackle-shop-hat-default.jpg?v=1782323672&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/tackleshop-default-angle-2.jpg?v=1782323673&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/tackle-shop-trucker-hat"
+    },
+    {
+      "name": "Cabin Trucker Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/cabintruckerdefault.jpg?v=1782315473&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/headwear/products/cabin-trucker-hat"
+    },
+    {
+      "name": "Decoy Unstructured Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/duck-default.jpg?v=1782315504&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "",
+      "href": "https://thegreatpnw.com/collections/headwear/products/decoy-unstructured-hat"
+    },
+    {
+      "name": "Co-Op Trucker Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-coop-26.webp?v=1781898110&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/camo-hat.jpg?v=1782427171&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/co-op-trucker-hat"
+    },
+    {
+      "name": "Buck Fever Trucker Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-buck-fever-26.webp?v=1781898067&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/hat.jpg?v=1782490887&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/buck-fever-trucker-hat"
+    },
+    {
+      "name": "Rainier Collab Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-collab-26_4d532518-2080-42eb-abd4-36ac83b31cc4.jpg?v=1781898034&width=360",
+      "imageAlt": "image",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/patch-hat.jpg?v=1782427001&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/rainier-collab-hat"
+    },
+    {
+      "name": "Session Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-session-26.jpg?v=1778802163&width=360",
+      "imageAlt": "Session Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/session_hat_rainier_2026_lifestyle_1.jpg?v=1778609327&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/session-hat"
+    },
+    {
+      "name": "Anthem Dad Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-anthem-26.jpg?v=1778802163&width=360",
+      "imageAlt": "Anthem Dad Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/222222.jpg?v=1778620751&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/anthem-dad-hat"
+    },
+    {
+      "name": "Cascade Waxed Canvas Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-cascade-26.jpg?v=1778802163&width=360",
+      "imageAlt": "Cascade Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/cascade_hat_rainier_2026_lifestyle_1.jpg?v=1778609081&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/cascade-hat-1"
+    },
+    {
+      "name": "Brewmaster Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-brewmaster-26_320cf2dc-71a2-4c95-8b09-e9e5770e9e22.jpg?v=1778802163&width=360",
+      "imageAlt": "Brewmaster Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/brewmaster-hat---1.jpg?v=1782427503&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/brewmaster-hat"
+    },
+    {
+      "name": "Varsity Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-varsity-26_ff78d004-750a-48fa-abc4-e8075075fcc6.jpg?v=1778802163&width=360",
+      "imageAlt": "Varsity Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/varsity-hat.jpg?v=1782427470&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/varsity-hat"
+    },
+    {
+      "name": "Wrangle Trucker Hat",
+      "price": "$35.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/rainier-the-great-pnw-hat-wrangle-26_30645194-32d8-4cdd-8423-cb7eacd6eea4.jpg?v=1778802163&width=360",
+      "imageAlt": "Wrangle Trucker Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/wranglin-hat-lifess.jpg?v=1782479254&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/wrangle-trucker-hat"
+    },
+    {
+      "name": "Concrete Trucker Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/crt-default.jpg?v=1778607207&width=360",
+      "imageAlt": "Concrete Trucker Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/concrete-hat-2nd-angle.jpg?v=1776365017&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/concrete-trucker-hat"
+    },
+    {
+      "name": "Balance Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/balance-hat-default-1.jpg?v=1776363156&width=360",
+      "imageAlt": "Balance Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/balance-hat-2nd-angle.jpg?v=1776365032&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/balance-hat"
+    },
+    {
+      "name": "Sunny Days Hat",
+      "price": "$32.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/sunnydays-default-1.jpg?v=1776363186&width=360",
+      "imageAlt": "Sunny Days Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/sunny-days-2nd-angkle.jpg?v=1776365052&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/sunny-days-hat"
+    },
+    {
+      "name": "Tree Vibes Foam Trucker",
+      "price": "$32.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/tree-vibes-foam-trucker.jpg?v=1776366094&width=360",
+      "imageAlt": "Tree Vibes Foam Trucker - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/tree-vibes-foam-trucker-2nd-angle.jpg?v=1776366108&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/tree-vibes-foam-trucker"
+    },
+    {
+      "name": "Timberline Hat",
+      "price": "$34.99",
+      "imageSrc": "https://thegreatpnw.com/cdn/shop/files/timberline-hat-default.jpg?v=1776363252&width=360",
+      "imageAlt": "Timberline Hat - The Great PNW",
+      "imageSrcHover": "https://thegreatpnw.com/cdn/shop/files/timberlinehat_fall2025_lifestyle1_webimage.jpg?v=1776363252&width=360",
+      "href": "https://thegreatpnw.com/collections/headwear/products/timberline-hat"
+    }
+  ],
+  "bodyText": [
+    "You're $ 99.00 away from free shipping.",
+    "Get notified of sales, limited edition releases, and get 20% off your first order",
+    "GET 20% OFF YOUR FIRST ORDER",
+    "And be first to be notified on upcoming sales and new releases!"
+  ],
+  "sectionOrder": [
+    "header",
+    "hero",
+    "products",
+    "header",
+    "products",
+    "content",
+    "footer"
+  ],
+  "scrapedAt": "2026-06-27T06:39:26.002Z"
+}
