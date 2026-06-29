@@ -1,55 +1,48 @@
 # Worker
 
-Long-running job runner for the Landing Page Builder. Pulls `clone` and
-`publish` jobs from a pg-boss queue (on the Supabase Postgres) and runs the
-engine in [`../src`](../src). Deploys to a managed container host (Railway /
-Render / Fly).
+Long-running job runner for the Landing Page Builder. **Polls the Supabase
+`jobs` table** for queued work (atomic claim via the `claim_job` RPC) and runs
+the engine in [`../src`](../src). No external queue — the frontend enqueues by
+inserting a `jobs` row. Deploys to Railway (see below).
 
 ## What it does
 
-- **clone** — `scrape → materialize assets (WebP) → recipe → render → audit`
-  (via `src/pipeline.js`), uploads the build to the `builds` Storage bucket, and
-  sets `versions.preview_url / recipe / scores / status='ready'`. Brand comes
-  from the `brands` row if `brandId` is given, else it's auto-derived from the
-  scrape.
-- **publish** — deploys a stored build to Netlify (MVP) and records a
-  `deployments` row.
+- **clone** — loads the version's project (`root_url`, `brand_id`), runs
+  `scrape → materialize assets (WebP) → recipe → render → audit` via
+  `src/pipeline.js`, uploads the build to the `builds` Storage bucket, and sets
+  `versions.preview_url / recipe / scores / status='ready'`. Brand comes from the
+  `brands` row if the project has one, else it's auto-derived from the scrape.
+- **publish** — stub for now (Netlify deploy of a stored build is next).
 
-Job status is mirrored into the `jobs` table as it runs, so the frontend can
-follow progress via Supabase Realtime.
+Progress is written to the `jobs` row (`step`, `progress`, `state`) as it runs,
+so the frontend follows along via Supabase Realtime.
+
+## Enqueue contract
+
+The frontend inserts a `versions` row (`status='queued'`) and a `jobs` row
+(`kind='clone'`, `state='queued'`, `version_id`, `org_id`). The worker claims it
+and derives the URL/brand from the project. No Edge Function needed.
 
 ## Run locally
 
 ```bash
-# from repo root: install engine deps (puppeteer/sharp/lighthouse)
-npm ci
-# worker deps
-cd worker && npm install
-cp .env.example .env   # fill in DATABASE_URL + SUPABASE_* (+ NETLIFY_AUTH_TOKEN)
+npm ci                       # repo root: engine deps (puppeteer/sharp/lighthouse)
+cd worker && npm install     # @supabase/supabase-js
+cp .env.example .env         # set SUPABASE_URL + SUPABASE_SERVICE_ROLE
 npm start
 ```
 
-Enqueue a clone job (from anything with DB access / an Edge Function):
+## Deploy to Railway
 
-```js
-await boss.send('clone', {
-  jobId, versionId, orgId,
-  url: 'https://brand.com/collections/x',
-  brandId: null,          // null → auto-derive brand
-  trackingEnabled: true,
-});
-```
+1. New Railway project → Deploy from the GitHub repo `Ramsey-SL/landing-page-builder`.
+2. Railway reads `railway.json` (builds `worker/Dockerfile`, context = repo root).
+3. Set service variables:
+   - `SUPABASE_URL=https://cowxmuzkitmtdabfzhfu.supabase.co`
+   - `SUPABASE_SERVICE_ROLE=<service_role key from Supabase dashboard → Settings → API>`
+   - `BUILDS_BUCKET=builds`
+   - `WORKER_CONCURRENCY=2`
+4. Deploy. Logs should show "Worker up… Waiting for jobs". Create a project in the
+   web app and watch the version go queued → running → ready.
 
-## Deploy
-
-```bash
-docker build -f worker/Dockerfile -t lpb-worker .   # context = repo root
-# push to Railway/Render/Fly; set env from .env.example; scale 1+ instance.
-```
-
-## Status
-
-Skeleton — code-complete and ready to wire once a Supabase project exists. The
-engine half (`src/pipeline.js`) is tested end-to-end and already clones arbitrary
-URLs to 90+ pages. `handlers/publish.js` still needs the Storage→stageDir
-download helper (TODO marked inline).
+Scale by raising the instance count and/or `WORKER_CONCURRENCY` (each clone runs
+headless Chrome — budget ~1–2 GB RAM per concurrent job).

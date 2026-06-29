@@ -1,29 +1,45 @@
 /**
- * Clone job: scrape a URL → build a page → upload it → mark the version ready.
- * Payload: { jobId, versionId, orgId, url, brandId, trackingEnabled }
+ * Clone job. Receives a claimed `jobs` row; loads the version's project to get
+ * the URL + brand, runs the pipeline, uploads the build, marks the version ready.
  */
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { rm } from 'node:fs/promises';
 import { runClonePipeline } from '../../src/pipeline.js';
-import { updateJob, updateVersion, loadBrand } from '../lib/supabase.js';
+import { supabase, updateJob, updateVersion, loadBrand } from '../lib/supabase.js';
 import { uploadDir } from '../lib/storage.js';
 
 export async function handleClone(job) {
-  const { jobId, versionId, orgId, url, brandId, trackingEnabled = true } = job.data;
+  const jobId = job.id;
+  const versionId = job.version_id;
+  const orgId = job.org_id;
   const outDir = join(tmpdir(), 'lpb', versionId);
 
   try {
-    await updateJob(jobId, { state: 'running', step: 'scrape', progress: 5 });
+    await updateJob(jobId, { step: 'load', progress: 3 });
     await updateVersion(versionId, { status: 'running' });
 
-    const brand = await loadBrand(brandId); // null → pipeline auto-derives
+    const { data: version, error: vErr } = await supabase
+      .from('versions')
+      .select('project_id')
+      .eq('id', versionId)
+      .single();
+    if (vErr || !version) throw new Error(`version not found: ${vErr?.message}`);
+
+    const { data: project, error: pErr } = await supabase
+      .from('projects')
+      .select('root_url, brand_id')
+      .eq('id', version.project_id)
+      .single();
+    if (pErr || !project) throw new Error(`project not found: ${pErr?.message}`);
+
+    const brand = await loadBrand(project.brand_id); // null → pipeline auto-derives
 
     const result = await runClonePipeline({
-      url,
+      url: project.root_url,
       brand,
       outDir,
-      trackingEnabled,
+      trackingEnabled: true,
       audit: true,
       onProgress: (step, pct) => updateJob(jobId, { step, progress: pct }),
     });
@@ -43,9 +59,9 @@ export async function handleClone(job) {
     });
     await updateJob(jobId, { state: 'succeeded', step: 'done', progress: 100 });
   } catch (err) {
-    await updateVersion(versionId, { status: 'failed', error: String(err.message || err) });
-    await updateJob(jobId, { state: 'failed', error: String(err.message || err) });
-    throw err; // let pg-boss record the failure / retry policy decide
+    const msg = String(err.message || err);
+    await updateVersion(versionId, { status: 'failed', error: msg });
+    await updateJob(jobId, { state: 'failed', error: msg });
   } finally {
     await rm(outDir, { recursive: true, force: true });
   }
