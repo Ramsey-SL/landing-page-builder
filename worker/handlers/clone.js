@@ -4,10 +4,17 @@
  */
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { rm } from 'node:fs/promises';
+import { rm, writeFile } from 'node:fs/promises';
 import { runClonePipeline } from '../../src/pipeline.js';
-import { supabase, updateJob, updateVersion, loadBrand } from '../lib/supabase.js';
+import { supabase, updateJob, updateVersion, loadBrand, findBrandByDomain } from '../lib/supabase.js';
 import { uploadDir } from '../lib/storage.js';
+
+// Place a brand's display font (from Storage) into the build before render.
+async function prepareAssets(assetsDir, brand) {
+  if (!brand?.displayFontFile || !brand?.displayFontUrl) return;
+  const res = await fetch(brand.displayFontUrl);
+  if (res.ok) await writeFile(join(assetsDir, brand.displayFontFile), Buffer.from(await res.arrayBuffer()));
+}
 
 export async function handleClone(job) {
   const jobId = job.id;
@@ -33,7 +40,9 @@ export async function handleClone(job) {
       .single();
     if (pErr || !project) throw new Error(`project not found: ${pErr?.message}`);
 
-    const brand = await loadBrand(project.brand_id); // null → pipeline auto-derives
+    // Brand: explicit link → else auto-match by domain → else pipeline auto-derives.
+    const brand =
+      (await loadBrand(project.brand_id)) || (await findBrandByDomain(orgId, project.root_url));
 
     const result = await runClonePipeline({
       url: project.root_url,
@@ -41,6 +50,7 @@ export async function handleClone(job) {
       outDir,
       trackingEnabled: true,
       audit: true,
+      prepareAssets,
       onProgress: (step, pct) => updateJob(jobId, { step, progress: pct }),
     });
 

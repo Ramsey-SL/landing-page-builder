@@ -14,17 +14,15 @@ export async function updateVersion(versionId, patch) {
   await supabase.from('versions').update(patch).eq('id', versionId);
 }
 
-/** Map a `brands` row to the engine's Brand shape. Returns null if no row. */
-export async function loadBrand(brandId) {
-  if (!brandId) return null;
-  const { data } = await supabase.from('brands').select('*').eq('id', brandId).single();
-  if (!data) return null;
+/** Map a `brands` row to the engine's Brand shape. */
+function rowToBrand(data) {
   return {
     name: data.name,
     baseUrl: data.base_url || '',
     colors: data.colors,
     displayFont: data.display_font || '',
     displayFontFile: data.display_font_file || '',
+    displayFontUrl: data.display_font_url || '',
     logoSvg: data.logo_svg || `<span class="logo-fallback">${data.name}</span>`,
     announcement: data.announcement || '',
     nav: data.nav || [],
@@ -33,4 +31,27 @@ export async function loadBrand(brandId) {
     newsletter: data.newsletter || { heading: '', blurb: '', bannerHeading: '' },
     tracking: data.tracking || {},
   };
+}
+
+export async function loadBrand(brandId) {
+  if (!brandId) return null;
+  const { data } = await supabase.from('brands').select('*').eq('id', brandId).single();
+  return data ? rowToBrand(data) : null;
+}
+
+const host = (u) => {
+  try {
+    return new URL(u).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+};
+
+/** Find an org's brand whose base_url domain matches the given URL's domain. */
+export async function findBrandByDomain(orgId, url) {
+  const h = host(url);
+  if (!h) return null;
+  const { data } = await supabase.from('brands').select('*').eq('org_id', orgId);
+  const match = (data || []).find((b) => host(b.base_url) === h);
+  return match ? rowToBrand(match) : null;
 }

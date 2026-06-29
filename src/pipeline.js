@@ -52,6 +52,7 @@ export async function runClonePipeline({
   desktop = false,
   maxProducts,
   browser,
+  prepareAssets,
   onProgress = () => {},
 }) {
   const assetsDir = join(outDir, 'assets');
@@ -67,6 +68,9 @@ export async function runClonePipeline({
 
   onProgress('assets', 40);
   const assets = await materializeAssets(content, { assetsDir, maxProducts });
+
+  // Place brand-owned files (e.g. the display font) into the build before render.
+  if (prepareAssets) await prepareAssets(assetsDir, brand);
 
   onProgress('render', 70);
   const recipe = contentModelToRecipe(content, brand, assets);
