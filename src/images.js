@@ -88,5 +88,32 @@ export async function materializeAssets(content, { assetsDir, maxProducts = 36, 
   }
   await Promise.all(Array.from({ length: concurrency }, worker));
 
-  return { hero, products: products.filter(Boolean), ok, total: candidates.length, warnings };
+  // --- Collection cards ("shop by category" rows) ---
+  const collCandidates = (content.collectionLinks || []).filter((c) => c.imageSrc).slice(0, 12);
+  const collections = new Array(collCandidates.length);
+  let cidx = 0;
+  async function collWorker() {
+    while (cidx < collCandidates.length) {
+      const i = cidx++;
+      const c = collCandidates[i];
+      const file = `collection-${i + 1}.webp`;
+      try {
+        const dims = await toWebp(c.imageSrc, join(assetsDir, file), 700);
+        collections[i] = { label: c.label, href: c.href, localImage: `./assets/${file}`, width: dims.width, height: dims.height };
+      } catch (e) {
+        warnings.push(`skipped collection card (${c.label}): ${e.message}`);
+        collections[i] = null;
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(concurrency, 4) }, collWorker));
+
+  return {
+    hero,
+    products: products.filter(Boolean),
+    collections: collections.filter(Boolean),
+    ok,
+    total: candidates.length,
+    warnings,
+  };
 }

@@ -81,10 +81,37 @@ export async function scrapePage(url, { timeout = 60000, browser: provided, scre
       const txt = (el) => (el.textContent || '').replace(/\s+/g, ' ').trim();
       const uniq = (arr) => [...new Set(arr)];
 
-      // --- Headings ---
-      let h1 = uniq([...document.querySelectorAll('h1')].map(txt).filter(Boolean));
-      const h2 = uniq([...document.querySelectorAll('h2')].map(txt).filter(Boolean));
-      const h3 = uniq([...document.querySelectorAll('h3')].map(txt).filter(Boolean));
+      // --- Visibility / chrome filters ---
+      // Cart drawers, modals, mega-menus, etc. live in the DOM but aren't part of
+      // the page's visible content. Reading them pollutes headings/titles (e.g.
+      // an h1 of "Your Cart"), so exclude anything hidden or inside site chrome.
+      const CHROME_SEL =
+        'header, footer, nav, [class*="cart"], [id*="cart"], [class*="drawer"], [class*="modal"], ' +
+        '[role="dialog"], [aria-modal="true"], dialog, [class*="popup"], [class*="popover"], template';
+      // Only treat as hidden on reliable signals. NOT opacity/visibility — Shopify
+      // homepages animate sections in from opacity:0, which would hide real content.
+      const isHidden = (el) => {
+        for (let n = el; n && n !== document.body; n = n.parentElement) {
+          if (n.nodeType !== 1) continue;
+          if (n.hasAttribute('hidden') || n.getAttribute('aria-hidden') === 'true') return true;
+          if (getComputedStyle(n).display === 'none') return true;
+        }
+        return false;
+      };
+      // closest() can match a substring class on <body> itself, which would mark
+      // the whole page as chrome — never treat the page roots as chrome.
+      const inChrome = (el) => {
+        const m = el.closest && el.closest(CHROME_SEL);
+        return !!m && !['BODY', 'HTML', 'MAIN'].includes(m.tagName) && m.id !== 'MainContent' && !m.matches('[role="main"]');
+      };
+      const visibleContent = (el) => !!el && !isHidden(el) && !inChrome(el);
+      const headTexts = (sel) =>
+        uniq([...document.querySelectorAll(sel)].filter(visibleContent).map(txt).filter(Boolean));
+
+      // --- Headings (visible content only) ---
+      let h1 = headTexts('h1');
+      const h2 = headTexts('h2');
+      const h3 = headTexts('h3');
 
       // --- Meta ---
       const pageTitle = document.title || '';
@@ -244,20 +271,67 @@ export async function scrapePage(url, { timeout = 60000, browser: provided, scre
 
       // --- Collection name ---
       const ogTitle = document.querySelector('meta[property="og:title"]')?.content?.trim() || '';
+      const ogSiteName = document.querySelector('meta[property="og:site_name"]')?.content?.trim() || '';
+      const siteName = (ogSiteName || ogTitle || pageTitle).split(/[|–\-—]/)[0].trim();
       const breadcrumbActive = txt(
         document.querySelector(
           '.breadcrumb [aria-current], .breadcrumbs [aria-current], nav[aria-label*="readcrumb"] li:last-child'
         ) || {}
       );
-      const collectionName =
-        txt(
-          document.querySelector(
-            '.collection-title, .collection__title, .collection-hero__title, [class*="collection"] h1'
-          ) || {}
-        ) ||
-        breadcrumbActive ||
-        (ogTitle || pageTitle).split(/[|–\-—]/)[0].trim() ||
-        h1[0];
+      const collTitleEl = [
+        ...document.querySelectorAll(
+          '.collection-title, .collection__title, .collection-hero__title, [class*="collection"] h1'
+        ),
+      ].filter(visibleContent)[0];
+      let collectionName = txt(collTitleEl || {}) || breadcrumbActive || '';
+      // Reject obvious pollution (body copy mistaken for a title) and fall back to
+      // the page/site title — for collection pages og:title is the collection name;
+      // for homepages it's the brand name.
+      if (!collectionName || collectionName.length > 60) {
+        const fromTitle = (ogTitle || pageTitle).split(/[|–\-—]/)[0].trim();
+        collectionName = fromTitle || siteName || h1[0] || '';
+      }
+
+      // --- Collection cards (e.g. "Shop by Build" rows): links to /collections/ with an image ---
+      const collMap = new Map();
+      for (const a of document.querySelectorAll('a[href*="/collections/"]')) {
+        if (!visibleContent(a)) continue;
+        const href = abs(a.getAttribute('href'));
+        const m = href.match(/\/collections\/([^/?#]+)/);
+        if (!m) continue;
+        const handle = m[1];
+        if (handle === 'all' || handle === 'vendors' || handle === 'types') continue;
+        let scope = a;
+        for (let i = 0; i < 3 && scope.parentElement && !scope.querySelector('img'); i++) scope = scope.parentElement;
+        const img = scope.querySelector('img');
+        if (!img) continue;
+        const src = imgSrc(img);
+        if (!src || /logo|icon|sprite|payment/i.test(src)) continue;
+        const label = (txt(a) || txt(scope.querySelector('h2,h3,h4,[class*="title"]') || {}) || handle).slice(0, 60);
+        if (/^(view|shop|see|browse)\s+(all|more)$/i.test(label) || /^all$/i.test(label)) continue; // "View all" CTA, not a card
+        if (!collMap.has(handle)) collMap.set(handle, { handle, label, href, imageSrc: src });
+      }
+      const collectionLinks = [...collMap.values()].slice(0, 12);
+
+      // --- Content/narrative blocks (heading + copy that aren't product/collection grids) ---
+      const contentBlocks = [];
+      const seenHeading = new Set();
+      for (const el of document.querySelectorAll('section, [class*="section"], main > div')) {
+        if (!visibleContent(el)) continue;
+        if (el.querySelectorAll('a[href*="/products/"]').length > 2) continue; // product grid
+        if (el.querySelectorAll('a[href*="/collections/"]').length > 2) continue; // collection row
+        const heading = txt(el.querySelector('h1, h2, h3') || {});
+        if (!heading || heading.length > 120 || seenHeading.has(heading)) continue;
+        const para = [...el.querySelectorAll('p, .rte')].map(txt).filter((t) => t.length > 40)[0] || '';
+        if (!para) continue;
+        seenHeading.add(heading);
+        const ctaEl = [...el.querySelectorAll('a.button, a.btn, a[class*="button"], [class*="button"] a')].filter(
+          (x) => txt(x) && abs(x.getAttribute('href'))
+        )[0];
+        const cta = ctaEl ? { text: txt(ctaEl).slice(0, 40), href: abs(ctaEl.getAttribute('href')) } : null;
+        contentBlocks.push({ heading, text: para.slice(0, 400), cta });
+        if (contentBlocks.length >= 4) break;
+      }
 
       let h1Derived = false;
       if (h1.length === 0 && collectionName) {
@@ -304,7 +378,10 @@ export async function scrapePage(url, { timeout = 60000, browser: provided, scre
         ctaButtons,
         navLinks,
         collectionName,
+        siteName,
         productCards,
+        collectionLinks,
+        contentBlocks,
         bodyText,
         sectionOrder,
       };

@@ -11,6 +11,11 @@
 const HEX = /^#[0-9a-fA-F]{3,8}$/;
 const SECTION_TYPES = ['hero', 'productGrid', 'promo'];
 
+// Allowed layout variants per section type (mirrors src/sections.js).
+const VARIANTS = { hero: ['banner', 'split', 'overlay'], productGrid: ['grid'], promo: ['band', 'card'] };
+const ALIGN = ['left', 'center', 'right'];
+const COLUMNS = [2, 3, 4];
+
 const PATCH_SHAPE = `{
   "summary": "one sentence describing the change (required)",
   "meta":        { "collectionName"?: str, "subheadline"?: str, "pageTitle"?: str, "metaDescription"?: str },
@@ -18,7 +23,13 @@ const PATCH_SHAPE = `{
   "colors":      { "teal"?: hex, "footer"?: hex, "body"?: hex, "text"?: hex, "accent"?: hex },
   "announcement"?: str,
   "removeSections"?: ["promo" | "productGrid"],
-  "reorderSections"?: ["hero" | "productGrid" | "promo"]
+  "reorderSections"?: ["hero" | "productGrid" | "promo"],
+  "sectionStyles"?: [ {
+    "type": "hero" | "productGrid" | "promo",
+    "variant"?: ("banner"|"split"|"overlay")  // hero only; productGrid only "grid"; promo "band"|"card"
+              | ("band"|"card"),
+    "style"?: { "bg"?: hex, "color"?: hex, "accent"?: hex, "align"?: "left"|"center"|"right", "columns"?: 2|3|4, "padding"?: str }
+  } ]
 }`;
 
 /** Ask Claude for a JSON patch describing the requested change. */
@@ -35,13 +46,16 @@ export async function planEdit({ recipe, brand, instruction, client }) {
     newsletter: brand.newsletter,
     colors: brand.colors,
     announcement: brand.announcement,
-    sections: recipe.sections.map((s) => s.type),
+    sections: recipe.sections.map((s) => ({ type: s.type, variant: s.variant, style: s.style })),
   };
 
   const system =
     'You translate a plain-language tweak request into a STRICT JSON patch for a marketing landing page. ' +
     'Include ONLY the fields the instruction actually changes — omit everything else. ' +
     'Colors must be hex (e.g. "#073951") and must keep text readable (dark text on light backgrounds, light text on dark). ' +
+    'Use "sectionStyles" to change a section\'s LAYOUT or look: hero variants are banner|split|overlay; ' +
+    'promo (newsletter) variants are band|card; productGrid supports a 2/3/4 "columns" override. ' +
+    'Per-section "style" sets bg/color/accent (hex), align, columns, or padding, scoped to that section only. ' +
     'Do not invent product or image changes. Respond with ONLY the JSON object — no prose, no markdown fences.';
   const user = `Patch shape:\n${PATCH_SHAPE}\n\nCurrent values:\n${JSON.stringify(current, null, 2)}\n\nInstruction: "${instruction}"\n\nReturn the JSON patch.`;
 
@@ -96,6 +110,30 @@ export function applyPatch(recipe, brand, patch) {
       const ic = order.indexOf(c.type);
       return (ia < 0 ? 99 : ia) - (ic < 0 ? 99 : ic);
     });
+  }
+
+  // Per-section layout variant + scoped style overrides.
+  if (Array.isArray(patch.sectionStyles)) {
+    for (const entry of patch.sectionStyles) {
+      if (!entry || !SECTION_TYPES.includes(entry.type)) continue;
+      for (const s of r.sections.filter((s) => s.type === entry.type)) {
+        if (typeof entry.variant === 'string' && VARIANTS[entry.type]?.includes(entry.variant)) {
+          s.variant = entry.variant;
+        }
+        if (entry.style && typeof entry.style === 'object') {
+          const clean = {};
+          for (const k of ['bg', 'color', 'accent']) {
+            if (typeof entry.style[k] === 'string' && HEX.test(entry.style[k].trim())) clean[k] = entry.style[k].trim();
+          }
+          if (ALIGN.includes(entry.style.align)) clean.align = entry.style.align;
+          if (COLUMNS.includes(entry.style.columns)) clean.columns = entry.style.columns;
+          if (typeof entry.style.padding === 'string' && /^[\d.\s a-z%()]+$/i.test(entry.style.padding)) {
+            clean.padding = entry.style.padding.slice(0, 40);
+          }
+          if (Object.keys(clean).length) s.style = { ...(s.style || {}), ...clean };
+        }
+      }
+    }
   }
 
   return { recipe: r, brand: b };

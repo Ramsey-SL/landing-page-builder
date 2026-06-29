@@ -54,9 +54,17 @@
  * @typedef {Object} Assets  Output of materializeAssets().
  * @property {AssetRecord|null} hero
  * @property {ProductAsset[]} products
+ * @property {CollectionAsset[]} [collections]
  * @property {number} ok
  * @property {number} total
  * @property {string[]} warnings
+ *
+ * @typedef {Object} CollectionAsset  A materialized "shop by category" card.
+ * @property {string} label
+ * @property {string} href
+ * @property {string} localImage
+ * @property {number} width
+ * @property {number} height
  *
  * @typedef {Object} SectionStyle  Per-section visual overrides (scoped CSS).
  * @property {string} [bg]       Section background (CSS color).
@@ -67,11 +75,15 @@
  * @property {string} [padding]  Section padding (CSS shorthand).
  *
  * @typedef {Object} Section  One block in a recipe.
- * @property {('hero'|'productGrid'|'promo')} type
+ * @property {('hero'|'productGrid'|'collectionRow'|'richText'|'promo')} type
  * @property {string} [variant]  Layout variant for the type (default if omitted).
  * @property {SectionStyle} [style]
+ * @property {string} [title]    Optional section heading (overrides meta defaults).
+ * @property {string} [text]     Body copy (richText).
+ * @property {{text:string,href:string}|null} [cta]
  * @property {*} [hero]
  * @property {ProductAsset[]} [products]
+ * @property {CollectionAsset[]} [collections]
  * @property {*} [newsletter]
  *
  * @typedef {Object} Recipe  The render input a `version` stores.

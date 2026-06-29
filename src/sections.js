@@ -91,17 +91,71 @@ function heroOverlay(section, meta, id) {
 
 function productGrid(section, meta, id) {
   const titleId = `coll-title-${id}`;
+  const title = section.title || meta.collectionName;
+  const sub = section.text || meta.subheadline;
   const cols = section.style?.columns;
   // Higher specificity than the template's responsive .grid rules, so an
   // explicit column count wins at every breakpoint.
   const css = cols ? `.${id} .grid{grid-template-columns:repeat(${cols},1fr);}` : '';
   const html = `<section class="collection wrap ${id}" aria-labelledby="${titleId}">
-      <h2 class="collection__title" id="${titleId}">${esc(meta.collectionName)}</h2>
-      <p class="collection__sub">${esc(meta.subheadline)}</p>
+      <h2 class="collection__title" id="${titleId}">${esc(title)}</h2>
+      <p class="collection__sub">${esc(sub)}</p>
       <ul class="grid">
           ${renderProductGrid(section.products)}
       </ul>
     </section>`;
+  return { html, css };
+}
+
+/* ------------------------------ collectionRow ----------------------------- */
+// A row of "shop by category" cards (image + label) linking to collections.
+
+function collectionRow(section, meta, id) {
+  const cards = (section.collections || [])
+    .map(
+      (c) => `<li class="ccard"><a class="ccard__link" href="${esc(c.href)}">
+        <span class="ccard__media"><img src="${esc(c.localImage)}" alt="${esc(c.label)}" width="${c.width}" height="${c.height}" loading="lazy" decoding="async"></span>
+        <span class="ccard__label">${esc(c.label)}</span>
+      </a></li>`
+    )
+    .join('\n        ');
+  const titleId = `crow-title-${id}`;
+  const html = `<section class="crow wrap ${id}" aria-labelledby="${titleId}">
+      <h2 class="crow__title" id="${titleId}">${esc(section.title || 'Shop by Category')}</h2>
+      <ul class="crow__grid">
+        ${cards}
+      </ul>
+    </section>`;
+  const css = `.${id}.crow{padding:36px 0;}
+.${id} .crow__title{font-size:clamp(1.5rem,4vw,2.4rem);text-transform:uppercase;text-align:center;margin:0 0 24px;}
+.${id} .crow__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;list-style:none;margin:0;padding:0;}
+.${id} .ccard__link{display:block;position:relative;}
+.${id} .ccard__media{display:block;aspect-ratio:1/1;overflow:hidden;background:#f4f4f2;border-radius:8px;}
+.${id} .ccard__media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.${id} .ccard__link:hover .ccard__media img{transform:scale(1.05);}
+.${id} .ccard__label{display:block;margin-top:10px;text-align:center;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:.85rem;}
+@media(min-width:720px){.${id} .crow__grid{grid-template-columns:repeat(3,1fr);gap:20px;}}
+@media(min-width:1000px){.${id} .crow__grid{grid-template-columns:repeat(6,1fr);}}`;
+  return { html, css };
+}
+
+/* -------------------------------- richText -------------------------------- */
+// A centered narrative band: heading + copy + optional CTA.
+
+function richText(section, meta, id) {
+  const titleId = `rt-title-${id}`;
+  const ctaHtml =
+    section.cta && section.cta.text
+      ? `<a class="btn" href="${esc(section.cta.href || '#main')}">${esc(section.cta.text)}</a>`
+      : '';
+  const html = `<section class="richtext wrap ${id}" aria-labelledby="${titleId}">
+      ${section.title ? `<h2 class="richtext__title" id="${titleId}">${esc(section.title)}</h2>` : ''}
+      ${section.text ? `<p class="richtext__body">${esc(section.text)}</p>` : ''}
+      ${ctaHtml}
+    </section>`;
+  const css = `.${id}.richtext{padding:48px 18px;text-align:center;}
+.${id} .richtext__title{font-size:clamp(1.6rem,4.5vw,2.6rem);text-transform:uppercase;margin:0 0 16px;}
+.${id} .richtext__body{max-width:680px;margin:0 auto 24px;color:var(--muted);font-size:1.05rem;line-height:1.6;}`;
   return { html, css };
 }
 
@@ -146,6 +200,8 @@ function promoCard(section, meta, id) {
 export const SECTION_RENDERERS = {
   hero: { default: 'banner', variants: { banner: heroBanner, split: heroSplit, overlay: heroOverlay } },
   productGrid: { default: 'grid', variants: { grid: productGrid } },
+  collectionRow: { default: 'row', variants: { row: collectionRow } },
+  richText: { default: 'center', variants: { center: richText } },
   promo: { default: 'band', variants: { band: promoBand, card: promoCard } },
 };
 
