@@ -29,8 +29,11 @@ export async function uploadDir({ dir, bucket, prefix }) {
     const rel = relative(dir, file).split('\\').join('/');
     const key = `${prefix}/${rel}`;
     const body = await readFile(file);
-    const { error } = await supabase.storage.from(bucket).upload(key, body, {
-      contentType: MIME[extname(file).toLowerCase()] || 'application/octet-stream',
+    const type = MIME[extname(file).toLowerCase()] || 'application/octet-stream';
+    // Wrap in a Blob carrying the type — supabase-js stores a Node Buffer as
+    // text/plain otherwise, which makes the iframe show source instead of render.
+    const { error } = await supabase.storage.from(bucket).upload(key, new Blob([body], { type }), {
+      contentType: type,
       upsert: true,
     });
     if (error) throw new Error(`upload ${key}: ${error.message}`);

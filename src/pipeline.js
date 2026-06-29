@@ -92,8 +92,11 @@ export async function runClonePipeline({
 
   let scores = null;
   if (audit) {
-    onProgress('audit', 85);
-    scores = scoresFromLhr(await runAudit({ dir: outDir, desktop }));
+    onProgress('audit', 82);
+    scores = {
+      mobile: scoresFromLhr(await runAudit({ dir: outDir, desktop: false })),
+      desktop: scoresFromLhr(await runAudit({ dir: outDir, desktop: true })),
+    };
   }
 
   onProgress('done', 100);

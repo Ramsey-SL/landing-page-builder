@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { rm, writeFile } from 'node:fs/promises';
 import { runClonePipeline } from '../../src/pipeline.js';
+import { runAudit, scoresFromLhr } from '../../src/audit.js';
 import { supabase, updateJob, updateVersion, loadBrand, findBrandByDomain } from '../lib/supabase.js';
 import { uploadDir } from '../lib/storage.js';
 
@@ -63,11 +64,25 @@ export async function handleClone(job) {
     });
     const sourceUrl = result.sourceScreenshot ? previewUrl.replace(/index\.html$/, 'assets/source.jpg') : null;
 
+    // Benchmark the ORIGINAL live page (mobile + desktop) for a before/after.
+    // Best-effort — a slow/blocking source page shouldn't fail the clone.
+    await updateJob(jobId, { step: 'benchmark', progress: 90 });
+    let sourceScores = null;
+    try {
+      sourceScores = {
+        mobile: scoresFromLhr(await runAudit({ url: project.root_url, desktop: false })),
+        desktop: scoresFromLhr(await runAudit({ url: project.root_url, desktop: true })),
+      };
+    } catch (e) {
+      console.warn(`[clone] source benchmark failed: ${e.message}`);
+    }
+
     await updateVersion(versionId, {
       status: 'ready',
       recipe: result.recipe,
       brand: result.brand, // snapshot so edits are reproducible without re-resolving
-      scores: result.scores,
+      scores: result.scores, // { mobile, desktop } for the rebuild
+      source_scores: sourceScores, // { mobile, desktop } for the original
       preview_url: previewUrl,
       source_preview_url: sourceUrl,
     });

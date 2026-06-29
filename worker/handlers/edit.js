@@ -32,7 +32,7 @@ export async function handleEdit(job) {
 
     const { data: parent } = await supabase
       .from('versions')
-      .select('recipe, brand, preview_url, source_preview_url, project_id')
+      .select('recipe, brand, preview_url, source_preview_url, source_scores, project_id')
       .eq('id', version.parent_version_id)
       .single();
     if (!parent?.recipe) throw new Error('parent recipe missing');
@@ -64,7 +64,10 @@ export async function handleEdit(job) {
     await updateJob(jobId, { step: 'audit', progress: 80 });
     let scores = null;
     try {
-      scores = scoresFromLhr(await runAudit({ dir: outDir }));
+      scores = {
+        mobile: scoresFromLhr(await runAudit({ dir: outDir, desktop: false })),
+        desktop: scoresFromLhr(await runAudit({ dir: outDir, desktop: true })),
+      };
     } catch (e) {
       console.warn(`[edit] audit failed: ${e.message}`);
     }
