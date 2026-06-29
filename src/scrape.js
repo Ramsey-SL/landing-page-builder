@@ -339,6 +339,37 @@ export async function scrapePage(url, { timeout = 60000, browser: provided, scre
         h1Derived = true;
       }
 
+      // --- Palette (computed colors, for "inspired-by" theming) ---
+      const rgbToHex = (c) => {
+        const m = (c || '').match(/rgba?\(([^)]+)\)/);
+        if (!m) return '';
+        const [r, g, b, a] = m[1].split(',').map((x) => parseFloat(x));
+        if (a === 0) return '';
+        const h = (n) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, '0');
+        return `#${h(r)}${h(g)}${h(b)}`;
+      };
+      const bodyStyle = getComputedStyle(document.body);
+      const headerEl = document.querySelector('header');
+      const footerEl = document.querySelector('footer');
+      // Accent = most common non-white/near-black button background.
+      const btnBgs = {};
+      for (const el of document.querySelectorAll('button, a.button, a.btn, [class*="button"], [class*="btn"]')) {
+        if (inChrome(el) && !el.closest('header')) continue;
+        const hex = rgbToHex(getComputedStyle(el).backgroundColor);
+        if (!hex) continue;
+        const lum = parseInt(hex.slice(1, 3), 16) + parseInt(hex.slice(3, 5), 16) + parseInt(hex.slice(5, 7), 16);
+        if (lum < 60 || lum > 720) continue; // skip near-black / near-white
+        btnBgs[hex] = (btnBgs[hex] || 0) + 1;
+      }
+      const accent = Object.entries(btnBgs).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
+      const palette = {
+        body: rgbToHex(bodyStyle.backgroundColor) || '#ffffff',
+        text: rgbToHex(bodyStyle.color) || '#111111',
+        header: (headerEl && rgbToHex(getComputedStyle(headerEl).backgroundColor)) || '',
+        footer: (footerEl && rgbToHex(getComputedStyle(footerEl).backgroundColor)) || '',
+        accent,
+      };
+
       // --- Body text ---
       const bodyText = uniq(
         [...document.querySelectorAll('p, .rte, [class*="description"]')].map(txt).filter((t) => t.length > 20)
@@ -382,6 +413,7 @@ export async function scrapePage(url, { timeout = 60000, browser: provided, scre
         productCards,
         collectionLinks,
         contentBlocks,
+        palette,
         bodyText,
         sectionOrder,
       };
