@@ -3,9 +3,11 @@
  * small WHITELISTED JSON patch (never raw HTML); applyPatch applies it
  * deterministically to a {recipe, brand}. This keeps Lighthouse/accessibility
  * guarantees intact — the model can't emit markup, only constrained values.
+ *
+ * Note: the Anthropic SDK is imported lazily inside planEdit() so that importing
+ * applyPatch (pure, used in CI smoke tests with no deps installed) doesn't
+ * require the SDK to be present.
  */
-import Anthropic from '@anthropic-ai/sdk';
-
 const HEX = /^#[0-9a-fA-F]{3,8}$/;
 const SECTION_TYPES = ['hero', 'productGrid', 'promo'];
 
@@ -21,6 +23,7 @@ const PATCH_SHAPE = `{
 
 /** Ask Claude for a JSON patch describing the requested change. */
 export async function planEdit({ recipe, brand, instruction, client }) {
+  const { default: Anthropic } = await import('@anthropic-ai/sdk');
   const anthropic = client || new Anthropic(); // reads ANTHROPIC_API_KEY
   const current = {
     meta: {
