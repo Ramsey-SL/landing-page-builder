@@ -36,7 +36,7 @@ async function autoScroll(page) {
  *   Pass an existing `browser` to reuse it across jobs (the worker does this).
  * @returns {Promise<import('./types.js').ContentModel>}
  */
-export async function scrapePage(url, { timeout = 60000, browser: provided } = {}) {
+export async function scrapePage(url, { timeout = 60000, browser: provided, screenshot = false } = {}) {
   new URL(url); // throws on invalid URL
 
   const browser =
@@ -310,7 +310,14 @@ export async function scrapePage(url, { timeout = 60000, browser: provided } = {
       };
     });
 
-    return { url, ...data, scrapedAt: new Date().toISOString() };
+    // Optional full-page screenshot of the source (for side-by-side comparison).
+    let _screenshot;
+    if (screenshot) {
+      await page.evaluate(() => window.scrollTo(0, 0));
+      _screenshot = await page.screenshot({ fullPage: true, type: 'jpeg', quality: 72 });
+    }
+
+    return { url, ...data, scrapedAt: new Date().toISOString(), _screenshot };
   } finally {
     if (!provided) await browser.close();
   }

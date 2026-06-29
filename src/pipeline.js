@@ -53,6 +53,7 @@ export async function runClonePipeline({
   maxProducts,
   browser,
   prepareAssets,
+  captureSource = false,
   onProgress = () => {},
 }) {
   const assetsDir = join(outDir, 'assets');
@@ -61,7 +62,15 @@ export async function runClonePipeline({
   onProgress('scrape', 10);
   if (!content) {
     if (!url) throw new Error('runClonePipeline needs a url or content');
-    content = await scrapePage(url, { browser });
+    content = await scrapePage(url, { browser, screenshot: captureSource });
+  }
+
+  // Save a snapshot of the source page for side-by-side comparison.
+  let sourceScreenshot = null;
+  if (content._screenshot) {
+    await writeFile(join(assetsDir, 'source.jpg'), content._screenshot);
+    sourceScreenshot = './assets/source.jpg';
+    delete content._screenshot;
   }
 
   if (!brand) brand = deriveBrandFromContent(content);
@@ -88,5 +97,5 @@ export async function runClonePipeline({
   }
 
   onProgress('done', 100);
-  return { content, brand, assets, recipe, html, indexPath, sizeKB, checks, scores };
+  return { content, brand, assets, recipe, html, indexPath, sizeKB, checks, scores, sourceScreenshot };
 }

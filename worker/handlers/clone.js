@@ -51,6 +51,7 @@ export async function handleClone(job) {
       trackingEnabled: true,
       audit: true,
       prepareAssets,
+      captureSource: true,
       onProgress: (step, pct) => updateJob(jobId, { step, progress: pct }),
     });
 
@@ -60,12 +61,14 @@ export async function handleClone(job) {
       bucket: process.env.BUILDS_BUCKET || 'builds',
       prefix: `${orgId}/${versionId}`,
     });
+    const sourceUrl = result.sourceScreenshot ? previewUrl.replace(/index\.html$/, 'assets/source.jpg') : null;
 
     await updateVersion(versionId, {
       status: 'ready',
       recipe: result.recipe,
       scores: result.scores,
       preview_url: previewUrl,
+      source_preview_url: sourceUrl,
     });
     await updateJob(jobId, { state: 'succeeded', step: 'done', progress: 100 });
   } catch (err) {
