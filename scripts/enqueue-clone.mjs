@@ -25,12 +25,12 @@ const start = Date.now();
 let last = '';
 while (Date.now() - start < 280000) {
   await new Promise((r) => setTimeout(r, 4000));
-  const [v] = await get(`versions?id=eq.${version.id}&select=status,preview_url,scores,error`);
+  const [v] = await get(`versions?id=eq.${version.id}&select=status,preview_url,scores,source_scores,error`);
   const [j] = await get(`jobs?version_id=eq.${version.id}&select=step,progress,state&order=updated_at.desc&limit=1`);
   const line = `[${Math.round((Date.now() - start) / 1000)}s] version=${v.status} job=${j?.state} step=${j?.step ?? '-'} ${j?.progress ?? 0}%`;
   if (line !== last) { console.log(line); last = line; }
   if (v.status === 'ready') {
-    console.log(`\n✓ READY\n  preview: ${v.preview_url}\n  scores: ${JSON.stringify(v.scores)}`);
+    console.log(`\n✓ READY\n  preview: ${v.preview_url}\n  rebuild scores: ${JSON.stringify(v.scores)}\n  source scores:  ${JSON.stringify(v.source_scores)}`);
     process.exit(0);
   }
   if (v.status === 'failed') {

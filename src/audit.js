@@ -79,7 +79,16 @@ export async function runAudit({ dir, url, desktop = false }) {
       output: 'json',
       logLevel: 'error',
       onlyCategories: CATS,
+      // Audit the page even when the origin returns a non-2xx status. Real
+      // Shopify pages sometimes serve a full, renderable body with a 404 status
+      // (a "soft 404"); without this Lighthouse aborts with ERRORED_DOCUMENT_REQUEST.
+      ignoreStatusCode: true,
       formFactor: desktop ? 'desktop' : 'mobile',
+      // Use a plain Chrome UA — Lighthouse otherwise appends "Chrome-Lighthouse",
+      // which some bot-protection layers reject before the page can load.
+      emulatedUserAgent: desktop
+        ? 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+        : 'Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
       screenEmulation: desktop
         ? { mobile: false, width: 1350, height: 940, deviceScaleFactor: 1, disabled: false }
         : { mobile: true, width: 412, height: 823, deviceScaleFactor: 1.75, disabled: false },
@@ -95,6 +104,9 @@ export async function runAudit({ dir, url, desktop = false }) {
       };
     }
     const { lhr } = await lighthouse(target, options);
+    // A genuine load failure leaves every category null; surface it so callers
+    // can store null (→ "—") instead of a misleading 0/0/0/0.
+    if (lhr.runtimeError) throw new Error(`audit failed: ${lhr.runtimeError.code} ${lhr.runtimeError.message}`);
     return lhr;
   } finally {
     await browser.close();
