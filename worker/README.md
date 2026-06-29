@@ -35,7 +35,9 @@ npm start
 ## Deploy to Railway
 
 1. New Railway project → Deploy from the GitHub repo `Ramsey-SL/landing-page-builder`.
-2. Railway reads `railway.json` (builds `worker/Dockerfile`, context = repo root).
+2. In service **Settings → Build**, set **Builder = Dockerfile** (Dockerfile path
+   `Dockerfile` at repo root). `railway.json` also declares this, but set it
+   explicitly if Railway defaulted the service to Nixpacks on first deploy.
 3. Set service variables:
    - `SUPABASE_URL=https://cowxmuzkitmtdabfzhfu.supabase.co`
    - `SUPABASE_SERVICE_ROLE=<service_role key from Supabase dashboard → Settings → API>`

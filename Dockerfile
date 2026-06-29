@@ -1,6 +1,5 @@
-# Worker image — based on the official Puppeteer image (bundles a matching
-# Chrome + all system libs, so headless launches work out of the box).
-# Build context = repo ROOT:  docker build -f worker/Dockerfile -t lpb-worker .
+# Worker image (Railway). Based on the official Puppeteer image (bundles a
+# matching Chrome + all system libs). Repo root is the build context.
 FROM ghcr.io/puppeteer/puppeteer:23.11.1
 
 ENV PUPPETEER_SKIP_DOWNLOAD=true
@@ -9,7 +8,8 @@ ENV PUPPETEER_SKIP_DOWNLOAD=true
 WORKDIR /app
 USER root
 
-# Engine deps (puppeteer, sharp, lighthouse) from the repo root.
+# One clean install of all runtime deps (puppeteer, sharp, lighthouse,
+# @supabase/supabase-js). netlify-cli is a devDependency and is skipped.
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
@@ -17,9 +17,6 @@ RUN npm ci --omit=dev
 COPY src ./src
 COPY templates ./templates
 COPY worker ./worker
-
-# Worker-only deps (pg-boss, @supabase/supabase-js).
-RUN cd worker && npm install --omit=dev
 
 RUN chown -R pptruser:pptruser /app
 USER pptruser
