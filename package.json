@@ -16,6 +16,7 @@
     "run-all": "npm run scrape && npm run build && npm run audit && npm run deploy"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.1",
     "@supabase/supabase-js": "^2.45.0",
     "lighthouse": "^12.0.0",
     "puppeteer": "^23.0.0",

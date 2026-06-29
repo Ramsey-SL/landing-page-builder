@@ -66,6 +66,7 @@ export async function handleClone(job) {
     await updateVersion(versionId, {
       status: 'ready',
       recipe: result.recipe,
+      brand: result.brand, // snapshot so edits are reproducible without re-resolving
       scores: result.scores,
       preview_url: previewUrl,
       source_preview_url: sourceUrl,

@@ -110,6 +110,24 @@ check('auto-brand html has no @font-face', !autoHtml.includes('@font-face'));
 check('auto-brand html has no leftover tokens', !/\{\{[A-Z0-9_]+\}\}/.test(autoHtml));
 check('auto-brand html still renders products', autoHtml.includes('Alpha Tee'));
 
+// --- edit: applyPatch (pure, no API) ---
+const { applyPatch } = await import('../src/edit.js');
+const editRecipe = contentModelToRecipe(fakeContent, brand, fakeAssets);
+const patched = applyPatch(editRecipe, brand, {
+  summary: 'test',
+  meta: { subheadline: 'New subhead' },
+  newsletter: { bannerHeading: 'Get 25% Off' },
+  colors: { accent: '#0a1f44', text: 'not-a-hex' },
+  removeSections: ['promo'],
+});
+check('applyPatch updates meta subheadline', patched.recipe.meta.subheadline === 'New subhead');
+check('applyPatch updates newsletter banner', patched.brand.newsletter.bannerHeading === 'Get 25% Off');
+check('applyPatch accepts valid hex accent', patched.brand.colors.accent === '#0a1f44');
+check('applyPatch rejects invalid hex', patched.brand.colors.text === brand.colors.text);
+check('applyPatch removes promo section', !patched.recipe.sections.some((s) => s.type === 'promo'));
+check('applyPatch never removes hero', patched.recipe.sections.some((s) => s.type === 'hero'));
+check('applyPatch does not mutate original', editRecipe.meta.subheadline !== 'New subhead');
+
 // --- config validation ---
 const configDir = join(ROOT, 'config');
 const configFiles = (await readdir(configDir)).filter((f) => f.endsWith('.json'));

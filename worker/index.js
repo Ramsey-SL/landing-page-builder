@@ -7,11 +7,13 @@
  */
 import { supabase } from './lib/supabase.js';
 import { handleClone } from './handlers/clone.js';
+import { handleEdit } from './handlers/edit.js';
 import { handlePublish } from './handlers/publish.js';
 
 const CONCURRENCY = Number(process.env.WORKER_CONCURRENCY) || 2;
 const POLL_MS = Number(process.env.WORKER_POLL_MS) || 3000;
-const HANDLERS = { clone: handleClone, publish: handlePublish };
+const HANDLERS = { clone: handleClone, edit: handleEdit, publish: handlePublish };
+const KINDS = ['clone', 'edit', 'publish'];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -28,8 +30,11 @@ async function claim(kind) {
 
 async function tick() {
   while (active < CONCURRENCY) {
-    // Prefer clone jobs, then publish.
-    const job = (await claim('clone')) || (await claim('publish'));
+    let job = null;
+    for (const kind of KINDS) {
+      job = await claim(kind);
+      if (job) break;
+    }
     if (!job) break;
     active++;
     const handler = HANDLERS[job.kind];
