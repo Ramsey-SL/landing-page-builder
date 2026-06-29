@@ -85,6 +85,8 @@ export async function handleClone(job) {
       source_scores: sourceScores, // { mobile, desktop } for the original
       preview_url: previewUrl,
       source_preview_url: sourceUrl,
+      // Where this clone's assets live; derived versions reuse this base.
+      asset_base_url: previewUrl.replace(/index\.html$/, ''),
     });
     await updateJob(jobId, { state: 'succeeded', step: 'done', progress: 100 });
   } catch (err) {

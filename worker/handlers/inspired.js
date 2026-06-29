@@ -34,7 +34,7 @@ export async function handleInspired(job) {
 
     const { data: parent } = await supabase
       .from('versions')
-      .select('recipe, brand, preview_url, source_preview_url, source_scores')
+      .select('recipe, brand, preview_url, source_preview_url, source_scores, asset_base_url')
       .eq('id', version.parent_version_id)
       .single();
     if (!parent?.recipe || !parent?.brand) throw new Error('parent recipe/brand missing');
@@ -46,9 +46,10 @@ export async function handleInspired(job) {
     await updateJob(jobId, { step: 'render', progress: 60 });
     const { recipe, brand } = applyInspiration(parent.recipe, parent.brand, template);
     let html = await renderRecipe(recipe, brand, { trackingEnabled: true });
-    // Reuse the parent version's uploaded assets.
-    const parentBase = (parent.preview_url || '').replace(/\/index\.html$/, '');
-    if (parentBase) html = html.split('"./assets/').join(`"${parentBase}/assets/`);
+    // Reuse the ORIGINAL clone's uploaded assets (inherited base), so a chain of
+    // inspired/edit versions never points at an empty folder.
+    const assetBase = parent.asset_base_url || (parent.preview_url || '').replace(/index\.html$/, '');
+    if (assetBase) html = html.split('"./assets/').join(`"${assetBase}assets/`);
 
     await mkdir(outDir, { recursive: true });
     await writeFile(join(outDir, 'index.html'), html, 'utf8');
@@ -79,6 +80,7 @@ export async function handleInspired(job) {
       preview_url: previewUrl,
       source_preview_url: parent.source_preview_url,
       source_scores: parent.source_scores,
+      asset_base_url: assetBase,
       error: null,
     });
     await updateJob(jobId, { state: 'succeeded', step: 'done', progress: 100 });

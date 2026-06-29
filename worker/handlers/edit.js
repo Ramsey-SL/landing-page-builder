@@ -32,7 +32,7 @@ export async function handleEdit(job) {
 
     const { data: parent } = await supabase
       .from('versions')
-      .select('recipe, brand, preview_url, source_preview_url, source_scores, project_id')
+      .select('recipe, brand, preview_url, source_preview_url, source_scores, asset_base_url, project_id')
       .eq('id', version.parent_version_id)
       .single();
     if (!parent?.recipe) throw new Error('parent recipe missing');
@@ -54,9 +54,10 @@ export async function handleEdit(job) {
 
     await updateJob(jobId, { step: 'render', progress: 65 });
     let html = await renderRecipe(recipe, editedBrand, { trackingEnabled: true });
-    // Point asset references at the parent version's uploaded assets.
-    const parentBase = (parent.preview_url || '').replace(/\/index\.html$/, '');
-    if (parentBase) html = html.split('"./assets/').join(`"${parentBase}/assets/`);
+    // Point asset references at the ORIGINAL clone's uploaded assets (inherited
+    // base), so a chain of edits/inspired versions never points at an empty folder.
+    const assetBase = parent.asset_base_url || (parent.preview_url || '').replace(/index\.html$/, '');
+    if (assetBase) html = html.split('"./assets/').join(`"${assetBase}assets/`);
 
     await mkdir(outDir, { recursive: true });
     await writeFile(join(outDir, 'index.html'), html, 'utf8');
@@ -86,6 +87,7 @@ export async function handleEdit(job) {
       scores,
       preview_url: previewUrl,
       source_preview_url: parent.source_preview_url,
+      asset_base_url: assetBase,
       error: null,
     });
     await updateJob(jobId, { state: 'succeeded', step: 'done', progress: 100 });
