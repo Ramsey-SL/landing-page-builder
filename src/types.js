@@ -58,8 +58,18 @@
  * @property {number} total
  * @property {string[]} warnings
  *
+ * @typedef {Object} SectionStyle  Per-section visual overrides (scoped CSS).
+ * @property {string} [bg]       Section background (CSS color).
+ * @property {string} [color]    Section text color.
+ * @property {string} [accent]   Button/CTA color within the section.
+ * @property {('left'|'center'|'right')} [align]
+ * @property {(2|3|4)} [columns] Product-grid column count override.
+ * @property {string} [padding]  Section padding (CSS shorthand).
+ *
  * @typedef {Object} Section  One block in a recipe.
  * @property {('hero'|'productGrid'|'promo')} type
+ * @property {string} [variant]  Layout variant for the type (default if omitted).
+ * @property {SectionStyle} [style]
  * @property {*} [hero]
  * @property {ProductAsset[]} [products]
  * @property {*} [newsletter]

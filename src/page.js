@@ -19,7 +19,7 @@ import {
   renderSocial,
   renderTracking,
 } from './render.js';
-import { SECTION_RENDERERS } from './sections.js';
+import { renderSection } from './sections.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const TEMPLATE_PATH = join(ROOT, 'templates', 'landing-page.html');
@@ -33,13 +33,9 @@ const TEMPLATE_PATH = join(ROOT, 'templates', 'landing-page.html');
 export async function renderRecipe(recipe, brand, { trackingEnabled = true, template } = {}) {
   const shell = template || (await readFile(TEMPLATE_PATH, 'utf8'));
 
-  const main = recipe.sections
-    .map((s) => {
-      const fn = SECTION_RENDERERS[s.type];
-      if (!fn) throw new Error(`Unknown section type: ${s.type}`);
-      return fn(s, recipe.meta);
-    })
-    .join('\n\n    ');
+  const rendered = recipe.sections.map((s, i) => renderSection(s, recipe.meta, i));
+  const main = rendered.map((r) => r.html).join('\n\n    ');
+  const sectionStyles = rendered.map((r) => r.css).filter(Boolean).join('\n');
 
   const heroSection = recipe.sections.find((s) => s.type === 'hero');
   const heroSrc = heroSection?.hero?.localImage || './assets/hero.webp';
@@ -91,6 +87,7 @@ export async function renderRecipe(recipe, brand, { trackingEnabled = true, temp
     FONT_PRELOAD: fontPreload,
     FONT_FACE: fontFace,
     DISPLAY_STACK: displayStack,
+    SECTION_STYLES: sectionStyles,
     TRACKING: trackingEnabled ? renderTracking(brand.tracking, { enabled: ['google', 'meta', 'klaviyo'] }) : '',
   };
 

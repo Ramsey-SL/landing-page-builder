@@ -1,46 +1,168 @@
 /**
- * Section renderers — each returns an HTML fragment for the page <main>.
- * Markup mirrors the original monolithic template so output is unchanged; this
- * is the seam Phase 3 ("inspired by") grows into a full section library.
+ * Section library — each block renders to an HTML fragment for the page <main>.
+ *
+ * A section is `{ type, variant?, style?, ...data }`. `type` picks a renderer
+ * group, `variant` picks a layout within it (falling back to the group default),
+ * and `style` applies per-section visual overrides as CSS scoped to that block.
+ *
+ * Renderers receive (section, meta, id) and return { html, css }. `id` is a
+ * unique per-instance class (e.g. "sec-0") so a renderer can scope its own CSS
+ * and the dispatcher can layer style overrides on top without collisions.
+ *
+ * Backward compatible: a section with no `variant`/`style` renders exactly as
+ * the original monolithic template did (the default variants below are verbatim).
  */
 import { escapeHtml, renderProductGrid } from './render.js';
 
 const esc = escapeHtml;
 
-export function renderHeroSection(section, meta) {
+// Turn a SectionStyle into CSS scoped to `.sec-N`. Applies to every variant.
+function styleOverrides(id, style) {
+  if (!style || typeof style !== 'object') return '';
+  const root = [];
+  if (style.bg) root.push(`background:${style.bg};`);
+  if (style.color) root.push(`color:${style.color};`);
+  if (style.align) root.push(`text-align:${style.align};`);
+  if (style.padding) root.push(`padding:${style.padding};`);
+  let css = root.length ? `.${id}{${root.join('')}}` : '';
+  if (style.accent) {
+    css += `.${id} .btn{background:${style.accent};border-color:${style.accent};color:#fff;}`;
+    css += `.${id} .btn:hover{filter:brightness(.92);background:${style.accent};color:#fff;}`;
+  }
+  return css;
+}
+
+function cta(hero, meta) {
+  return hero?.cta || { text: `Shop ${meta.collectionName}`, href: '#main' };
+}
+
+/* ---------------------------------- hero ---------------------------------- */
+
+function heroBanner(section, meta, id) {
   const h = section.hero;
-  return `<section class="hero" aria-label="${esc(meta.collectionName)} collection banner">
+  const html = `<section class="hero ${id}" aria-label="${esc(meta.collectionName)} collection banner">
       <h1 class="visually-hidden">${esc(meta.h1)}</h1>
       <img src="${esc(h.localImage)}" alt="${esc(h.alt)}" width="${h.width}" height="${h.height}" fetchpriority="high" decoding="async">
     </section>`;
+  return { html, css: '' };
 }
 
-export function renderProductGridSection(section, meta) {
-  return `<section class="collection wrap" aria-labelledby="coll-title">
-      <h2 class="collection__title" id="coll-title">${esc(meta.collectionName)}</h2>
+function heroSplit(section, meta, id) {
+  const h = section.hero;
+  const c = cta(h, meta);
+  const html = `<section class="hero hero--split ${id}" aria-label="${esc(meta.collectionName)} collection banner">
+      <div class="hero__media"><img src="${esc(h.localImage)}" alt="${esc(h.alt)}" width="${h.width}" height="${h.height}" fetchpriority="high" decoding="async"></div>
+      <div class="hero__text">
+        <h1>${esc(meta.collectionName)}</h1>
+        <p>${esc(meta.subheadline)}</p>
+        <a class="btn" href="${esc(c.href)}">${esc(c.text)}</a>
+      </div>
+    </section>`;
+  const css = `.${id}.hero--split{display:grid;grid-template-columns:1fr;align-items:stretch;}
+.${id} .hero__media{min-height:240px;}
+.${id} .hero__media img{width:100%;height:100%;object-fit:cover;}
+.${id} .hero__text{padding:40px 22px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;}
+.${id} .hero__text h1{font-size:clamp(2rem,6vw,3.4rem);text-transform:uppercase;margin:0 0 12px;}
+.${id} .hero__text p{color:var(--muted);max-width:48ch;margin:0 0 24px;}
+@media(min-width:820px){.${id}.hero--split{grid-template-columns:1fr 1fr;}}`;
+  return { html, css };
+}
+
+function heroOverlay(section, meta, id) {
+  const h = section.hero;
+  const c = cta(h, meta);
+  const html = `<section class="hero hero--overlay ${id}" aria-label="${esc(meta.collectionName)} collection banner">
+      <img src="${esc(h.localImage)}" alt="${esc(h.alt)}" width="${h.width}" height="${h.height}" fetchpriority="high" decoding="async">
+      <div class="hero__overlay">
+        <h1>${esc(meta.collectionName)}</h1>
+        <p>${esc(meta.subheadline)}</p>
+        <a class="btn" href="${esc(c.href)}">${esc(c.text)}</a>
+      </div>
+    </section>`;
+  const css = `.${id}.hero--overlay{position:relative;}
+.${id}.hero--overlay>img{width:100%;height:clamp(360px,60vh,640px);object-fit:cover;}
+.${id} .hero__overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;padding:24px;color:#fff;background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.45));}
+.${id} .hero__overlay h1{font-size:clamp(2.2rem,7vw,4rem);text-transform:uppercase;margin:0;text-shadow:0 2px 12px rgba(0,0,0,.4);}
+.${id} .hero__overlay p{max-width:54ch;margin:0;font-size:1.05rem;text-shadow:0 1px 8px rgba(0,0,0,.5);}`;
+  return { html, css };
+}
+
+/* ------------------------------- productGrid ------------------------------ */
+
+function productGrid(section, meta, id) {
+  const titleId = `coll-title-${id}`;
+  const cols = section.style?.columns;
+  // Higher specificity than the template's responsive .grid rules, so an
+  // explicit column count wins at every breakpoint.
+  const css = cols ? `.${id} .grid{grid-template-columns:repeat(${cols},1fr);}` : '';
+  const html = `<section class="collection wrap ${id}" aria-labelledby="${titleId}">
+      <h2 class="collection__title" id="${titleId}">${esc(meta.collectionName)}</h2>
       <p class="collection__sub">${esc(meta.subheadline)}</p>
       <ul class="grid">
           ${renderProductGrid(section.products)}
       </ul>
     </section>`;
+  return { html, css };
 }
 
-export function renderPromoSection(section) {
-  const n = section.newsletter || {};
-  return `<section class="promo" aria-labelledby="promo-title">
-      <h2 id="promo-title">${esc(n.bannerHeading)}</h2>
-      <p>${esc(n.blurb)}</p>
-      <form class="signup" data-klaviyo-signup aria-label="Email signup">
+/* ---------------------------------- promo --------------------------------- */
+
+function signupForm() {
+  return `<form class="signup" data-klaviyo-signup aria-label="Email signup">
         <label class="visually-hidden" for="promo-email">Email address</label>
         <input id="promo-email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
         <button class="btn" type="submit">Sign Up</button>
         <p class="signup__ok" data-signup-success hidden>Thanks — check your inbox for your discount!</p>
-      </form>
-    </section>`;
+      </form>`;
 }
 
+function promoBand(section, meta, id) {
+  const n = section.newsletter || {};
+  const html = `<section class="promo ${id}" aria-labelledby="promo-title-${id}">
+      <h2 id="promo-title-${id}">${esc(n.bannerHeading)}</h2>
+      <p>${esc(n.blurb)}</p>
+      ${signupForm()}
+    </section>`;
+  return { html, css: '' };
+}
+
+function promoCard(section, meta, id) {
+  const n = section.newsletter || {};
+  const html = `<section class="promo promo--card wrap ${id}" aria-labelledby="promo-title-${id}">
+      <div class="promo__inner">
+        <h2 id="promo-title-${id}">${esc(n.bannerHeading)}</h2>
+        <p>${esc(n.blurb)}</p>
+        ${signupForm()}
+      </div>
+    </section>`;
+  const css = `.${id}.promo--card{background:transparent;color:var(--text);padding:48px 18px;}
+.${id} .promo__inner{background:var(--teal);color:#fff;border-radius:16px;padding:48px 28px;max-width:760px;margin:0 auto;text-align:center;}
+.${id} .promo__inner p{color:#dce8ed;}`;
+  return { html, css };
+}
+
+/* ------------------------------- dispatcher ------------------------------- */
+
 export const SECTION_RENDERERS = {
-  hero: renderHeroSection,
-  productGrid: renderProductGridSection,
-  promo: renderPromoSection,
+  hero: { default: 'banner', variants: { banner: heroBanner, split: heroSplit, overlay: heroOverlay } },
+  productGrid: { default: 'grid', variants: { grid: productGrid } },
+  promo: { default: 'band', variants: { band: promoBand, card: promoCard } },
 };
+
+/**
+ * Render one section to { html, css }. `index` makes the per-instance class.
+ * @param {import('./types.js').Section} section
+ * @param {import('./types.js').Recipe['meta']} meta
+ * @param {number} index
+ */
+export function renderSection(section, meta, index) {
+  const group = SECTION_RENDERERS[section.type];
+  if (!group) throw new Error(`Unknown section type: ${section.type}`);
+  const id = `sec-${index}`;
+  const variant = section.variant && group.variants[section.variant] ? section.variant : group.default;
+  const out = group.variants[variant](section, meta, id);
+  const html = typeof out === 'string' ? out : out.html;
+  let css = typeof out === 'string' ? '' : out.css || '';
+  css += styleOverrides(id, section.style);
+  return { html, css };
+}
